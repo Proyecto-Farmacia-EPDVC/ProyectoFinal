@@ -11,9 +11,10 @@
     <AssemblyName>Loginfarmacia</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,47 +74,47 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarEmpleado.Designer.vb">
-      <DependentUpon>AgregarEmpleado.vb</DependentUpon>
+    <Compile Include="Formularios\frmCategoria.Designer.vb">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="AgregarEmpleado.vb">
+    <Compile Include="Formularios\frmCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulos.Designer.vb">
-      <DependentUpon>Articulos.vb</DependentUpon>
+    <Compile Include="Formularios\frmEmpleado.Designer.vb">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulos.vb">
+    <Compile Include="Formularios\frmEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <Compile Include="Formularios\frmProductos.Designer.vb">
+      <DependentUpon>frmProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.vb">
+    <Compile Include="Formularios\frmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Conexion.vb" />
-    <Compile Include="DespedirEmpleado.Designer.vb">
-      <DependentUpon>DespedirEmpleado.vb</DependentUpon>
+    <Compile Include="Formularios\FrmCliente.Designer.vb">
+      <DependentUpon>FrmCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="DespedirEmpleado.vb">
+    <Compile Include="Formularios\FrmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FarmaciaEmpleados.Designer.vb">
+    <Compile Include="Conexion\Conexion.vb" />
+    <Compile Include="Login y principales\FarmaciaEmpleados.Designer.vb">
       <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="FarmaciaEmpleados.vb">
+    <Compile Include="Login y principales\FarmaciaEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FarmaciaGerente.Designer.vb">
+    <Compile Include="Login y principales\FarmaciaGerente.Designer.vb">
       <DependentUpon>FarmaciaGerente.vb</DependentUpon>
     </Compile>
-    <Compile Include="FarmaciaGerente.vb">
+    <Compile Include="Login y principales\FarmaciaGerente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginFarmacia.vb">
+    <Compile Include="Login y principales\LoginFarmacia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginFarmacia.Designer.vb">
+    <Compile Include="Login y principales\LoginFarmacia.Designer.vb">
       <DependentUpon>LoginFarmacia.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -135,25 +136,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AgregarEmpleado.resx">
-      <DependentUpon>AgregarEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCategoria.resx">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Articulos.resx">
-      <DependentUpon>Articulos.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmEmpleado.resx">
+      <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmProductos.resx">
+      <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DespedirEmpleado.resx">
-      <DependentUpon>DespedirEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmCliente.resx">
+      <DependentUpon>FrmCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FarmaciaEmpleados.resx">
+    <EmbeddedResource Include="Login y principales\FarmaciaEmpleados.resx">
       <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FarmaciaGerente.resx">
+    <EmbeddedResource Include="Login y principales\FarmaciaGerente.resx">
       <DependentUpon>FarmaciaGerente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginFarmacia.resx">
+    <EmbeddedResource Include="Login y principales\LoginFarmacia.resx">
       <DependentUpon>LoginFarmacia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -174,6 +175,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base de Datos\Scrip Base de Datos.txt" />
+    <None Include="Imagen\transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reporte\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
