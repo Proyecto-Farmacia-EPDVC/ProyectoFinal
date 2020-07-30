@@ -279,14 +279,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub txtidcategoria_TextChanged(sender As Object, e As EventArgs) Handles txtidcategoria.TextChanged
-
-    End Sub
-
-    Private Sub txtidcategoria_Validated(sender As Object, e As EventArgs) Handles txtidcategoria.Validated
-
-    End Sub
-
     Private Sub txtidcategoria_Validating(sender As Object, e As CancelEventArgs) Handles txtidcategoria.Validating
         Try
             If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio

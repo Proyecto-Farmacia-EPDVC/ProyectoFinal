@@ -99,6 +99,30 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conexion\Conexion.vb" />
+    <Compile Include="Formularios\frmDetalles_venta.Designer.vb">
+      <DependentUpon>frmDetalles_venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmDetalles_venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCompra.Designer.vb">
+      <DependentUpon>frmCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVenta.Designer.vb">
+      <DependentUpon>frmVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProveedor.Designer.vb">
+      <DependentUpon>frmProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login y principales\FarmaciaEmpleados.Designer.vb">
       <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>
     </Compile>
@@ -139,6 +163,9 @@
     <EmbeddedResource Include="Formularios\frmCategoria.resx">
       <DependentUpon>frmCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCompra.resx">
+      <DependentUpon>frmCompra.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +174,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCliente.resx">
       <DependentUpon>FrmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDetalles_venta.resx">
+      <DependentUpon>frmDetalles_venta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProveedor.resx">
+      <DependentUpon>frmProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVenta.resx">
+      <DependentUpon>frmVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login y principales\FarmaciaEmpleados.resx">
       <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>

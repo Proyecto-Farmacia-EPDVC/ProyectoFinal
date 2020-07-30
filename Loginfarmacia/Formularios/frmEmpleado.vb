@@ -172,10 +172,6 @@ Public Class frmEmpleado
         End If
     End Sub
 
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
-
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
         Dim FilaActual As Integer
         FilaActual = datalistado.CurrentRow.Index
@@ -191,8 +187,8 @@ Public Class frmEmpleado
 
     Private Sub datalistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellDoubleClick
         If txtflag.Text = "1" Then
-            ' frmVenta.txtidempleado.Text = datalistado.SelectedCells.Item(1).Value
-            ' frmVenta.txtnomempleado.Text = datalistado.SelectedCells.Item(2).Value
+            frmVenta.txtidempleado.Text = datalistado.SelectedCells.Item(1).Value
+            frmVenta.txtnomempleado.Text = datalistado.SelectedCells.Item(2).Value
             Me.Close()
         End If
     End Sub
