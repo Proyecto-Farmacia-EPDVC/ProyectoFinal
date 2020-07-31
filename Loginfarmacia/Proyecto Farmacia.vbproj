@@ -86,6 +86,12 @@
     <Compile Include="Formularios\frmEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmhora.Designer.vb">
+      <DependentUpon>frmhora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmhora.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmProductos.Designer.vb">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="Formularios\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmhora.resx">
+      <DependentUpon>frmhora.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base de Datos\Scrip Base de Datos.txt" />
+    <Content Include="Imagen\btneditar.png" />
+    <Content Include="Imagen\btnguarddar.png" />
+    <Content Include="Imagen\btnimprimir.png" />
+    <Content Include="Imagen\btnmenu.png" />
+    <Content Include="Imagen\btnnuevo.png" />
     <None Include="Imagen\transparente.png" />
   </ItemGroup>
   <ItemGroup>

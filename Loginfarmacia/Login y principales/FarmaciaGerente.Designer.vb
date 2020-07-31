@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FarmaciaGerente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,425 +20,358 @@ Partial Class FarmaciaGerente
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FarmaciaGerente))
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PanelLateral = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BarraTitulo = New System.Windows.Forms.Panel()
+        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.panel6 = New System.Windows.Forms.Panel()
+        Me.panel5 = New System.Windows.Forms.Panel()
+        Me.btnReportes = New System.Windows.Forms.Button()
+        Me.MenuVertical = New System.Windows.Forms.Panel()
+        Me.panel7 = New System.Windows.Forms.Panel()
+        Me.btncategoria = New System.Windows.Forms.Button()
+        Me.btnempleados = New System.Windows.Forms.Button()
+        Me.panel4 = New System.Windows.Forms.Panel()
+        Me.btncompras = New System.Windows.Forms.Button()
+        Me.btnclientes = New System.Windows.Forms.Button()
+        Me.panel2 = New System.Windows.Forms.Panel()
+        Me.btnventas = New System.Windows.Forms.Button()
+        Me.panel1 = New System.Windows.Forms.Panel()
+        Me.btnproductos = New System.Windows.Forms.Button()
+        Me.PanelForms = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnproveedor = New System.Windows.Forms.Button()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.panelSuperior = New System.Windows.Forms.Panel()
-        Me.btnRestaurar = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnMaximizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelLateral.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelSuperior.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BarraTitulo.SuspendLayout()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuVertical.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox6
+        'BarraTitulo
         '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(756, 212)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox6.TabIndex = 25
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(260, 212)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 24
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(756, 60)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 23
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(518, 60)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 22
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(260, 60)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 21
-        Me.PictureBox2.TabStop = False
-        '
-        'PanelLateral
-        '
-        Me.PanelLateral.BackColor = System.Drawing.SystemColors.GrayText
-        Me.PanelLateral.Controls.Add(Me.Label2)
-        Me.PanelLateral.Controls.Add(Me.PictureBox1)
-        Me.PanelLateral.Controls.Add(Me.Label1)
-        Me.PanelLateral.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelLateral.Location = New System.Drawing.Point(0, 47)
-        Me.PanelLateral.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelLateral.Name = "PanelLateral"
-        Me.PanelLateral.Size = New System.Drawing.Size(210, 493)
-        Me.PanelLateral.TabIndex = 20
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 144)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(164, 62)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "MENU" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GERENTES" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(44, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(12, 62)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 32)
-        Me.Label1.TabIndex = 6
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'panelSuperior
-        '
-        Me.panelSuperior.BackColor = System.Drawing.SystemColors.Highlight
-        Me.panelSuperior.Controls.Add(Me.btnRestaurar)
-        Me.panelSuperior.Controls.Add(Me.btnMinimizar)
-        Me.panelSuperior.Controls.Add(Me.btnMaximizar)
-        Me.panelSuperior.Controls.Add(Me.btnCerrar)
-        Me.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelSuperior.Location = New System.Drawing.Point(0, 0)
-        Me.panelSuperior.Margin = New System.Windows.Forms.Padding(2)
-        Me.panelSuperior.Name = "panelSuperior"
-        Me.panelSuperior.Size = New System.Drawing.Size(1067, 47)
-        Me.panelSuperior.TabIndex = 19
-        '
-        'btnRestaurar
-        '
-        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRestaurar.FlatAppearance.BorderSize = 0
-        Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestaurar.Image = CType(resources.GetObject("btnRestaurar.Image"), System.Drawing.Image)
-        Me.btnRestaurar.Location = New System.Drawing.Point(1008, 0)
-        Me.btnRestaurar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnRestaurar.Name = "btnRestaurar"
-        Me.btnRestaurar.Size = New System.Drawing.Size(27, 27)
-        Me.btnRestaurar.TabIndex = 3
-        Me.btnRestaurar.UseVisualStyleBackColor = True
-        Me.btnRestaurar.Visible = False
+        Me.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.BarraTitulo.Controls.Add(Me.btnMinimizar)
+        Me.BarraTitulo.Controls.Add(Me.btnCerrar)
+        Me.BarraTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.BarraTitulo.Name = "BarraTitulo"
+        Me.BarraTitulo.Size = New System.Drawing.Size(1080, 38)
+        Me.BarraTitulo.TabIndex = 6
         '
         'btnMinimizar
         '
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.Location = New System.Drawing.Point(978, 2)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1011, 6)
         Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(27, 26)
+        Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
+        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnMinimizar.TabIndex = 2
-        Me.btnMinimizar.UseVisualStyleBackColor = True
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMaximizar.FlatAppearance.BorderSize = 0
-        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
-        Me.btnMaximizar.Location = New System.Drawing.Point(1008, 2)
-        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(27, 26)
-        Me.btnMaximizar.TabIndex = 1
-        Me.btnMaximizar.UseVisualStyleBackColor = True
+        Me.btnMinimizar.TabStop = False
         '
         'btnCerrar
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
-        Me.btnCerrar.Location = New System.Drawing.Point(1038, 2)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Location = New System.Drawing.Point(1042, 6)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(27, 26)
+        Me.btnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.btnCerrar.TabStop = False
         '
-        'PictureBox7
+        'panel6
         '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(518, 212)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 26
-        Me.PictureBox7.TabStop = False
+        Me.panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel6.Location = New System.Drawing.Point(0, 371)
+        Me.panel6.Name = "panel6"
+        Me.panel6.Size = New System.Drawing.Size(5, 32)
+        Me.panel6.TabIndex = 12
         '
-        'PictureBox8
+        'panel5
         '
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(260, 366)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 27
-        Me.PictureBox8.TabStop = False
+        Me.panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel5.Location = New System.Drawing.Point(3, 520)
+        Me.panel5.Name = "panel5"
+        Me.panel5.Size = New System.Drawing.Size(5, 36)
+        Me.panel5.TabIndex = 10
         '
-        'PictureBox9
+        'btnReportes
         '
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(518, 366)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 28
-        Me.PictureBox9.TabStop = False
+        Me.btnReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnReportes.FlatAppearance.BorderSize = 0
+        Me.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReportes.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReportes.ForeColor = System.Drawing.Color.White
+        Me.btnReportes.Image = CType(resources.GetObject("btnReportes.Image"), System.Drawing.Image)
+        Me.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReportes.Location = New System.Drawing.Point(3, 416)
+        Me.btnReportes.Name = "btnReportes"
+        Me.btnReportes.Size = New System.Drawing.Size(216, 32)
+        Me.btnReportes.TabIndex = 13
+        Me.btnReportes.Text = "Reportes"
+        Me.btnReportes.UseVisualStyleBackColor = False
         '
-        'PictureBox10
+        'MenuVertical
         '
-        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
-        Me.PictureBox10.Location = New System.Drawing.Point(756, 366)
-        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(122, 108)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 29
-        Me.PictureBox10.TabStop = False
+        Me.MenuVertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.MenuVertical.Controls.Add(Me.Label1)
+        Me.MenuVertical.Controls.Add(Me.Panel8)
+        Me.MenuVertical.Controls.Add(Me.btnproveedor)
+        Me.MenuVertical.Controls.Add(Me.Panel3)
+        Me.MenuVertical.Controls.Add(Me.btnproductos)
+        Me.MenuVertical.Controls.Add(Me.btnReportes)
+        Me.MenuVertical.Controls.Add(Me.panel6)
+        Me.MenuVertical.Controls.Add(Me.btncategoria)
+        Me.MenuVertical.Controls.Add(Me.panel5)
+        Me.MenuVertical.Controls.Add(Me.btnempleados)
+        Me.MenuVertical.Controls.Add(Me.btncompras)
+        Me.MenuVertical.Controls.Add(Me.btnclientes)
+        Me.MenuVertical.Controls.Add(Me.panel2)
+        Me.MenuVertical.Controls.Add(Me.btnventas)
+        Me.MenuVertical.Controls.Add(Me.panel1)
+        Me.MenuVertical.Controls.Add(Me.panel4)
+        Me.MenuVertical.Controls.Add(Me.panel7)
+        Me.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left
+        Me.MenuVertical.Location = New System.Drawing.Point(0, 0)
+        Me.MenuVertical.Name = "MenuVertical"
+        Me.MenuVertical.Size = New System.Drawing.Size(220, 612)
+        Me.MenuVertical.TabIndex = 7
         '
-        'Label3
+        'panel7
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(276, 180)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 17)
-        Me.Label3.TabIndex = 30
-        Me.Label3.Text = "ARTICULOS"
+        Me.panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel7.Location = New System.Drawing.Point(0, 320)
+        Me.panel7.Name = "panel7"
+        Me.panel7.Size = New System.Drawing.Size(10, 37)
+        Me.panel7.TabIndex = 14
         '
-        'Label4
+        'btncategoria
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(546, 180)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 17)
-        Me.Label4.TabIndex = 31
-        Me.Label4.Text = "CLIENTES"
+        Me.btncategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btncategoria.FlatAppearance.BorderSize = 0
+        Me.btncategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btncategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncategoria.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncategoria.ForeColor = System.Drawing.Color.White
+        Me.btncategoria.Image = CType(resources.GetObject("btncategoria.Image"), System.Drawing.Image)
+        Me.btncategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btncategoria.Location = New System.Drawing.Point(5, 319)
+        Me.btncategoria.Name = "btncategoria"
+        Me.btncategoria.Size = New System.Drawing.Size(217, 39)
+        Me.btncategoria.TabIndex = 11
+        Me.btncategoria.Text = "Categoría"
+        Me.btncategoria.UseVisualStyleBackColor = False
         '
-        'Label5
+        'btnempleados
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(787, 180)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 17)
-        Me.Label5.TabIndex = 32
-        Me.Label5.Text = "VENTAS"
+        Me.btnempleados.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnempleados.FlatAppearance.BorderSize = 0
+        Me.btnempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnempleados.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnempleados.ForeColor = System.Drawing.Color.White
+        Me.btnempleados.Image = CType(resources.GetObject("btnempleados.Image"), System.Drawing.Image)
+        Me.btnempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnempleados.Location = New System.Drawing.Point(6, 371)
+        Me.btnempleados.Name = "btnempleados"
+        Me.btnempleados.Size = New System.Drawing.Size(211, 39)
+        Me.btnempleados.TabIndex = 9
+        Me.btnempleados.Text = "Empleados"
+        Me.btnempleados.UseVisualStyleBackColor = False
         '
-        'Label6
+        'panel4
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(257, 331)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(114, 17)
-        Me.Label6.TabIndex = 33
-        Me.Label6.Text = "AUTO SERVICIO"
+        Me.panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel4.Location = New System.Drawing.Point(0, 267)
+        Me.panel4.Name = "panel4"
+        Me.panel4.Size = New System.Drawing.Size(10, 43)
+        Me.panel4.TabIndex = 8
         '
-        'Label7
+        'btncompras
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(743, 331)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(142, 17)
-        Me.Label7.TabIndex = 34
-        Me.Label7.Text = "CONSULTA VENTAS"
+        Me.btncompras.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btncompras.FlatAppearance.BorderSize = 0
+        Me.btncompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncompras.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncompras.ForeColor = System.Drawing.Color.White
+        Me.btncompras.Image = CType(resources.GetObject("btncompras.Image"), System.Drawing.Image)
+        Me.btncompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btncompras.Location = New System.Drawing.Point(5, 507)
+        Me.btncompras.Name = "btncompras"
+        Me.btncompras.Size = New System.Drawing.Size(215, 58)
+        Me.btncompras.TabIndex = 7
+        Me.btncompras.Text = "Compras"
+        Me.btncompras.UseVisualStyleBackColor = False
         '
-        'Label8
+        'btnclientes
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(477, 331)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(199, 17)
-        Me.Label8.TabIndex = 35
-        Me.Label8.Text = "COMPRAS Y PROVEEDORES" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.btnclientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnclientes.FlatAppearance.BorderSize = 0
+        Me.btnclientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclientes.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnclientes.ForeColor = System.Drawing.Color.White
+        Me.btnclientes.Image = CType(resources.GetObject("btnclientes.Image"), System.Drawing.Image)
+        Me.btnclientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnclientes.Location = New System.Drawing.Point(5, 267)
+        Me.btnclientes.Name = "btnclientes"
+        Me.btnclientes.Size = New System.Drawing.Size(214, 45)
+        Me.btnclientes.TabIndex = 5
+        Me.btnclientes.Text = "Clientes"
+        Me.btnclientes.UseVisualStyleBackColor = False
         '
-        'Label9
+        'panel2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(244, 488)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(157, 17)
-        Me.Label9.TabIndex = 36
-        Me.Label9.Text = "AGREGAR EMPLEADO"
+        Me.panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel2.Location = New System.Drawing.Point(0, 209)
+        Me.panel2.Name = "panel2"
+        Me.panel2.Size = New System.Drawing.Size(10, 50)
+        Me.panel2.TabIndex = 4
         '
-        'Label10
+        'btnventas
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(495, 488)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(157, 17)
-        Me.Label10.TabIndex = 37
-        Me.Label10.Text = "DESPEDIR EMPLEADO"
+        Me.btnventas.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnventas.FlatAppearance.BorderSize = 0
+        Me.btnventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnventas.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnventas.ForeColor = System.Drawing.Color.White
+        Me.btnventas.Image = CType(resources.GetObject("btnventas.Image"), System.Drawing.Image)
+        Me.btnventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnventas.Location = New System.Drawing.Point(6, 148)
+        Me.btnventas.Name = "btnventas"
+        Me.btnventas.Size = New System.Drawing.Size(217, 55)
+        Me.btnventas.TabIndex = 3
+        Me.btnventas.Text = "Ventas"
+        Me.btnventas.UseVisualStyleBackColor = False
         '
-        'Label11
+        'panel1
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(743, 488)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(156, 17)
-        Me.Label11.TabIndex = 38
-        Me.Label11.Text = "EMPLEADOS ACTIVOS"
+        Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.panel1.Location = New System.Drawing.Point(0, 154)
+        Me.panel1.Name = "panel1"
+        Me.panel1.Size = New System.Drawing.Size(10, 49)
+        Me.panel1.TabIndex = 2
+        '
+        'btnproductos
+        '
+        Me.btnproductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnproductos.FlatAppearance.BorderSize = 0
+        Me.btnproductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnproductos.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnproductos.ForeColor = System.Drawing.Color.White
+        Me.btnproductos.Image = CType(resources.GetObject("btnproductos.Image"), System.Drawing.Image)
+        Me.btnproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnproductos.Location = New System.Drawing.Point(5, 206)
+        Me.btnproductos.Name = "btnproductos"
+        Me.btnproductos.Size = New System.Drawing.Size(215, 55)
+        Me.btnproductos.TabIndex = 1
+        Me.btnproductos.Text = "Productos"
+        Me.btnproductos.UseVisualStyleBackColor = False
+        '
+        'PanelForms
+        '
+        Me.PanelForms.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.PanelForms.Location = New System.Drawing.Point(218, 37)
+        Me.PanelForms.Name = "PanelForms"
+        Me.PanelForms.Size = New System.Drawing.Size(862, 575)
+        Me.PanelForms.TabIndex = 8
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(0, 416)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(5, 32)
+        Me.Panel3.TabIndex = 13
+        '
+        'btnproveedor
+        '
+        Me.btnproveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnproveedor.FlatAppearance.BorderSize = 0
+        Me.btnproveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnproveedor.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnproveedor.ForeColor = System.Drawing.Color.White
+        Me.btnproveedor.Image = CType(resources.GetObject("btnproveedor.Image"), System.Drawing.Image)
+        Me.btnproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnproveedor.Location = New System.Drawing.Point(4, 456)
+        Me.btnproveedor.Name = "btnproveedor"
+        Me.btnproveedor.Size = New System.Drawing.Size(214, 45)
+        Me.btnproveedor.TabIndex = 15
+        Me.btnproveedor.Text = "Proveedor"
+        Me.btnproveedor.UseVisualStyleBackColor = False
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel8.Location = New System.Drawing.Point(0, 456)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(5, 45)
+        Me.Panel8.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Dubai", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 60)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(189, 45)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Farmacia La Fe"
         '
         'FarmaciaGerente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 540)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.PictureBox10)
-        Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.PictureBox8)
-        Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PanelLateral)
-        Me.Controls.Add(Me.panelSuperior)
+        Me.ClientSize = New System.Drawing.Size(1080, 612)
+        Me.Controls.Add(Me.BarraTitulo)
+        Me.Controls.Add(Me.MenuVertical)
+        Me.Controls.Add(Me.PanelForms)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FarmaciaGerente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FarmaciaGerente"
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelLateral.ResumeLayout(False)
-        Me.PanelLateral.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelSuperior.ResumeLayout(False)
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BarraTitulo.ResumeLayout(False)
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuVertical.ResumeLayout(False)
+        Me.MenuVertical.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PanelLateral As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Private WithEvents BarraTitulo As Panel
+    Private WithEvents btnMinimizar As PictureBox
+    Private WithEvents btnCerrar As PictureBox
+    Private WithEvents panel6 As Panel
+    Private WithEvents panel5 As Panel
+    Private WithEvents btnReportes As Button
+    Private WithEvents MenuVertical As Panel
+    Private WithEvents panel7 As Panel
+    Private WithEvents btncategoria As Button
+    Private WithEvents btnempleados As Button
+    Private WithEvents panel4 As Panel
+    Private WithEvents btncompras As Button
+    Private WithEvents btnclientes As Button
+    Private WithEvents panel2 As Panel
+    Private WithEvents btnventas As Button
+    Private WithEvents panel1 As Panel
+    Private WithEvents btnproductos As Button
+    Private WithEvents PanelForms As Panel
+    Private WithEvents Panel8 As Panel
+    Private WithEvents btnproveedor As Button
+    Private WithEvents Panel3 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents panelSuperior As Panel
-    Friend WithEvents btnRestaurar As Button
-    Friend WithEvents btnMinimizar As Button
-    Friend WithEvents btnMaximizar As Button
-    Friend WithEvents btnCerrar As Button
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
 End Class

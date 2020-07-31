@@ -1,62 +1,78 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class FarmaciaGerente
-        <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-        Private Shared Sub ReleaseCapture()
-        End Sub
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
 
-        <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-        Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
-        End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
 
-        Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        abrirFormulario(frmhora)
+    End Sub
 
-        End Sub
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs)
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub abrirFormulario(ByVal formHijo As Object)
+        If PanelForms.Controls.Count > 0 Then
+            Me.PanelForms.Controls.RemoveAt(0)
+        End If
+        Dim frm As Form = TryCast(formHijo, Form)
+        frm.TopLevel = False
+        frm.Dock = DockStyle.Fill
+        Me.PanelForms.Controls.Add(frm)
+        Me.PanelForms.Tag = frm
+        frm.Show()
+    End Sub
 
-        Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
-            Me.WindowState = FormWindowState.Minimized
-        End Sub
+    Private Sub panelSuperior_Paint(sender As Object, e As PaintEventArgs)
 
-        Private Sub panelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles panelSuperior.Paint
+    End Sub
 
-        End Sub
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
+        End
+    End Sub
 
-        Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
-            btnMaximizar.Visible = False
-            btnRestaurar.Visible = True
-            'Me.WindowState = FormWindowState.Maximized
-            'Cambia el tamaño del formulario sin ocultar la barra
-            Me.Size = Screen.PrimaryScreen.WorkingArea.Size
-            'El formulario se ubique en toda la pantalla
-            Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+    Private Sub panelSuperior_MouseHover(sender As Object, e As EventArgs)
 
-        End Sub
+    End Sub
 
-        Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-            End
-        End Sub
+    Private Sub PanelLateral_Paint(sender As Object, e As PaintEventArgs)
 
-        Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+    End Sub
 
-            btnRestaurar.Visible = False
-            btnMaximizar.Visible = True
-            ' Me.WindowState = FormWindowState.Normal
+    Private Sub PanelForms_Paint(sender As Object, e As PaintEventArgs)
 
-            Me.Size = New System.Drawing.Size(900, 500)
-            'Centrar el formulario en la pantalla
-            Me.Left = (Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2
-            Me.Top = (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2
-        End Sub
+    End Sub
 
-    Private Sub panelSuperior_MouseHover(sender As Object, e As EventArgs) Handles panelSuperior.MouseHover
+    Private Sub btnMinimizar_Click_1(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnCerrar_Click_1(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        End
+    End Sub
+
+    Private Sub BarraTitulo_Paint(sender As Object, e As PaintEventArgs) Handles BarraTitulo.Paint
+
+    End Sub
+
+    Private Sub BarraTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles BarraTitulo.MouseMove
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub PanelLateral_Paint(sender As Object, e As PaintEventArgs) Handles PanelLateral.Paint
+    Private Sub PanelForms_Paint_1(sender As Object, e As PaintEventArgs) Handles PanelForms.Paint
 
-        End Sub
+    End Sub
 
-        Private Sub PanelForms_Paint(sender As Object, e As PaintEventArgs)
+    Private Sub btnlogohora_Click(sender As Object, e As EventArgs) 
+        abrirFormulario(frmhora)
+    End Sub
 
-        End Sub
-    End Class
+    Private Sub panel4_Paint(sender As Object, e As PaintEventArgs) Handles panel4.Paint
+
+    End Sub
+End Class

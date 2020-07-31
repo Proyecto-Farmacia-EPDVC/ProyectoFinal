@@ -9,54 +9,69 @@ Public Class FarmaciaEmpleados
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        abrirFormulario(frmhora)
     End Sub
 
-    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub panelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles panelSuperior.Paint
+    Private Sub panelSuperior_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
-
-    Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
-        btnMaximizar.Visible = False
-        btnRestaurar.Visible = True
-        'Me.WindowState = FormWindowState.Maximized
-        'Cambia el tamaño del formulario sin ocultar la barra
-        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
-        'El formulario se ubique en toda la pantalla
-        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
-
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
-    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
-
-        btnRestaurar.Visible = False
-        btnMaximizar.Visible = True
-        ' Me.WindowState = FormWindowState.Normal
-
-        Me.Size = New System.Drawing.Size(900, 500)
-        'Centrar el formulario en la pantalla
-        Me.Left = (Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2
-        Me.Top = (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2
-    End Sub
-
-    Private Sub panelSuperior_MouseHover(sender As Object, e As EventArgs) Handles panelSuperior.MouseHover
+    Private Sub panelSuperior_MouseHover(sender As Object, e As EventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
-    Private Sub PanelLateral_Paint(sender As Object, e As PaintEventArgs) Handles PanelLateral.Paint
+    Private Sub abrirFormulario(ByVal formHijo As Object)
+        If PanelForms.Controls.Count > 0 Then
+            Me.PanelForms.Controls.RemoveAt(0)
+        End If
+        Dim frm As Form = TryCast(formHijo, Form)
+        frm.TopLevel = False
+        frm.Dock = DockStyle.Fill
+        Me.PanelForms.Controls.Add(frm)
+        Me.PanelForms.Tag = frm
+        frm.Show()
+    End Sub
+    Private Sub PanelLateral_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
     Private Sub PanelForms_Paint(sender As Object, e As PaintEventArgs)
 
+    End Sub
+
+    Private Sub panelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles PanelForms.Paint
+
+    End Sub
+
+    Private Sub button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnCerrar_Click_1(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        End
+    End Sub
+
+    Private Sub btnMinimizar_Click_1(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub BarraTitulo_Paint(sender As Object, e As PaintEventArgs) Handles BarraTitulo.Paint
+
+    End Sub
+
+    Private Sub btnhora_Click(sender As Object, e As EventArgs) 
+        abrirFormulario(frmhora)
+    End Sub
+
+    Private Sub BarraTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles BarraTitulo.MouseMove
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 End Class
