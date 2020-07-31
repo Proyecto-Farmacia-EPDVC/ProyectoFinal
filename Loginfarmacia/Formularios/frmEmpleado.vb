@@ -185,15 +185,19 @@ Public Class frmEmpleado
         btneditar.Visible = True
     End Sub
 
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Dim OPC As DialogResult
+        OPC = MessageBox.Show("¿Seguro que desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If OPC = DialogResult.Yes Then
+            Close()
+        End If
+    End Sub
+
     Private Sub datalistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellDoubleClick
         If txtflag.Text = "1" Then
             frmVenta.txtidempleado.Text = datalistado.SelectedCells.Item(1).Value
             frmVenta.txtnomempleado.Text = datalistado.SelectedCells.Item(2).Value
             Me.Close()
         End If
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-
     End Sub
 End Class

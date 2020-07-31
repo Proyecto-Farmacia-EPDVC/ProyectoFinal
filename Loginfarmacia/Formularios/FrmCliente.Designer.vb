@@ -65,10 +65,10 @@ Partial Class FrmCliente
         Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.Location = New System.Drawing.Point(992, 6)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1028, 4)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(1, 1, 1, 1)
         Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(30, 32)
+        Me.btnMinimizar.Size = New System.Drawing.Size(20, 21)
         Me.btnMinimizar.TabIndex = 10
         Me.btnMinimizar.UseVisualStyleBackColor = True
         '
@@ -81,104 +81,119 @@ Partial Class FrmCliente
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
-        Me.btnCerrar.Location = New System.Drawing.Point(1026, 6)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Location = New System.Drawing.Point(1051, 4)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(1, 1, 1, 1)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(30, 32)
+        Me.btnCerrar.Size = New System.Drawing.Size(20, 21)
         Me.btnCerrar.TabIndex = 8
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'txtflag
         '
-        Me.txtflag.Location = New System.Drawing.Point(1019, 47)
+        Me.txtflag.Location = New System.Drawing.Point(443, 39)
+        Me.txtflag.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtflag.Name = "txtflag"
-        Me.txtflag.Size = New System.Drawing.Size(22, 26)
+        Me.txtflag.Size = New System.Drawing.Size(16, 35)
         Me.txtflag.TabIndex = 20
         Me.txtflag.Text = "0"
         '
         'btnguardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(145, 321)
+        Me.btnguardar.Image = CType(resources.GetObject("btnguardar.Image"), System.Drawing.Image)
+        Me.btnguardar.Location = New System.Drawing.Point(380, 451)
+        Me.btnguardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(118, 57)
+        Me.btnguardar.Size = New System.Drawing.Size(109, 70)
         Me.btnguardar.TabIndex = 16
-        Me.btnguardar.Text = "Guardar"
+        Me.btnguardar.Text = "GUARDAR"
+        Me.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnguardar.UseVisualStyleBackColor = True
         '
         'btneditar
         '
-        Me.btneditar.Location = New System.Drawing.Point(145, 321)
+        Me.btneditar.Location = New System.Drawing.Point(380, 451)
+        Me.btneditar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(118, 57)
+        Me.btneditar.Size = New System.Drawing.Size(92, 70)
         Me.btneditar.TabIndex = 13
         Me.btneditar.Text = "Editar"
         Me.btneditar.UseVisualStyleBackColor = True
         '
         'btnnuevo
         '
-        Me.btnnuevo.Location = New System.Drawing.Point(11, 321)
+        Me.btnnuevo.Image = CType(resources.GetObject("btnnuevo.Image"), System.Drawing.Image)
+        Me.btnnuevo.Location = New System.Drawing.Point(270, 451)
+        Me.btnnuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(128, 57)
+        Me.btnnuevo.Size = New System.Drawing.Size(106, 70)
         Me.btnnuevo.TabIndex = 12
-        Me.btnnuevo.Text = "Nuevo"
+        Me.btnnuevo.Text = "NUEVO"
+        Me.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnnuevo.UseVisualStyleBackColor = True
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 280)
+        Me.Label6.Location = New System.Drawing.Point(5, 425)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(37, 20)
+        Me.Label6.Size = New System.Drawing.Size(39, 27)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "DNI"
         '
         'txtdni
         '
-        Me.txtdni.Location = New System.Drawing.Point(114, 277)
+        Me.txtdni.Location = New System.Drawing.Point(76, 423)
+        Me.txtdni.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdni.MaxLength = 13
         Me.txtdni.Name = "txtdni"
-        Me.txtdni.Size = New System.Drawing.Size(264, 26)
+        Me.txtdni.Size = New System.Drawing.Size(177, 35)
         Me.txtdni.TabIndex = 10
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 236)
+        Me.Label5.Location = New System.Drawing.Point(4, 356)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 20)
+        Me.Label5.Size = New System.Drawing.Size(38, 27)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "TEL"
         '
         'txttelefono
         '
-        Me.txttelefono.Location = New System.Drawing.Point(114, 230)
+        Me.txttelefono.Location = New System.Drawing.Point(125, 348)
+        Me.txttelefono.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txttelefono.MaxLength = 9
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(264, 26)
+        Me.txttelefono.Size = New System.Drawing.Size(268, 35)
         Me.txttelefono.TabIndex = 8
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 190)
+        Me.Label4.Location = New System.Drawing.Point(5, 277)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 20)
+        Me.Label4.Size = New System.Drawing.Size(93, 27)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "DIRECCION"
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(114, 187)
+        Me.txtdireccion.Location = New System.Drawing.Point(124, 272)
+        Me.txtdireccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(264, 26)
+        Me.txtdireccion.Size = New System.Drawing.Size(268, 35)
         Me.txtdireccion.TabIndex = 6
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 144)
+        Me.Label3.Location = New System.Drawing.Point(4, 198)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 20)
+        Me.Label3.Size = New System.Drawing.Size(94, 27)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "APELLIDOS"
         '
@@ -191,27 +206,30 @@ Partial Class FrmCliente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 45)
+        Me.Label7.Location = New System.Drawing.Point(10, 29)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(169, 20)
+        Me.Label7.Size = New System.Drawing.Size(169, 27)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Busqueda por Nombre"
         '
         'inexistente
         '
         Me.inexistente.AutoSize = True
-        Me.inexistente.Location = New System.Drawing.Point(237, 205)
+        Me.inexistente.Location = New System.Drawing.Point(158, 133)
+        Me.inexistente.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.inexistente.Name = "inexistente"
-        Me.inexistente.Size = New System.Drawing.Size(142, 20)
+        Me.inexistente.Size = New System.Drawing.Size(142, 27)
         Me.inexistente.TabIndex = 17
         Me.inexistente.TabStop = True
         Me.inexistente.Text = "Datos Inexistentes"
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(203, 39)
+        Me.txtbuscar.Location = New System.Drawing.Point(183, 26)
+        Me.txtbuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtbuscar.Name = "txtbuscar"
-        Me.txtbuscar.Size = New System.Drawing.Size(264, 26)
+        Me.txtbuscar.Size = New System.Drawing.Size(217, 35)
         Me.txtbuscar.TabIndex = 16
         '
         'datalistado
@@ -220,52 +238,58 @@ Partial Class FrmCliente
         Me.datalistado.AllowUserToDeleteRows = False
         Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.datalistado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
-        Me.datalistado.Location = New System.Drawing.Point(6, 96)
+        Me.datalistado.Location = New System.Drawing.Point(15, 86)
+        Me.datalistado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
         Me.datalistado.RowTemplate.Height = 28
         Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(594, 251)
+        Me.datalistado.Size = New System.Drawing.Size(396, 323)
         Me.datalistado.TabIndex = 0
         '
         'txtapellidos
         '
-        Me.txtapellidos.Location = New System.Drawing.Point(114, 141)
+        Me.txtapellidos.Location = New System.Drawing.Point(125, 192)
+        Me.txtapellidos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtapellidos.Name = "txtapellidos"
-        Me.txtapellidos.Size = New System.Drawing.Size(264, 26)
+        Me.txtapellidos.Size = New System.Drawing.Size(268, 35)
         Me.txtapellidos.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 99)
+        Me.Label2.Location = New System.Drawing.Point(4, 119)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 20)
+        Me.Label2.Size = New System.Drawing.Size(77, 27)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "NOMBRE"
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(114, 93)
+        Me.txtnombre.Location = New System.Drawing.Point(125, 111)
+        Me.txtnombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(264, 26)
+        Me.txtnombre.Size = New System.Drawing.Size(268, 35)
         Me.txtnombre.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 65)
+        Me.Label1.Location = New System.Drawing.Point(4, 42)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 20)
+        Me.Label1.Size = New System.Drawing.Size(28, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID"
         '
         'txtidcliente
         '
-        Me.txtidcliente.Location = New System.Drawing.Point(114, 59)
+        Me.txtidcliente.Location = New System.Drawing.Point(125, 39)
+        Me.txtidcliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtidcliente.Name = "txtidcliente"
         Me.txtidcliente.ReadOnly = True
-        Me.txtidcliente.Size = New System.Drawing.Size(264, 26)
+        Me.txtidcliente.Size = New System.Drawing.Size(268, 35)
         Me.txtidcliente.TabIndex = 0
         '
         'GroupBox2
@@ -274,15 +298,19 @@ Partial Class FrmCliente
         Me.GroupBox2.Controls.Add(Me.inexistente)
         Me.GroupBox2.Controls.Add(Me.txtbuscar)
         Me.GroupBox2.Controls.Add(Me.datalistado)
-        Me.GroupBox2.Location = New System.Drawing.Point(441, 61)
+        Me.GroupBox2.Font = New System.Drawing.Font("Dubai", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(583, 53)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(606, 399)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(436, 426)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "lista clientes"
+        Me.GroupBox2.Text = "LISTA CLIENTES"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtflag)
         Me.GroupBox1.Controls.Add(Me.btnguardar)
         Me.GroupBox1.Controls.Add(Me.btneditar)
         Me.GroupBox1.Controls.Add(Me.btnnuevo)
@@ -298,12 +326,15 @@ Partial Class FrmCliente
         Me.GroupBox1.Controls.Add(Me.txtnombre)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtidcliente)
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 58)
+        Me.GroupBox1.Font = New System.Drawing.Font("Dubai", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(30, 53)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(411, 459)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(493, 550)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Mantenimiento"
+        Me.GroupBox1.Text = "MANTENIMIENTO"
         '
         'ErrorValidacion
         '
@@ -311,17 +342,15 @@ Partial Class FrmCliente
         '
         'FrmCliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(1070, 565)
-        Me.Controls.Add(Me.txtflag)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1080, 612)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnMinimizar)
         Me.Controls.Add(Me.btnCerrar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FrmCliente"
         Me.Text = "Clientes"
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
@@ -331,7 +360,6 @@ Partial Class FrmCliente
         Me.GroupBox1.PerformLayout()
         CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnMinimizar As Button
