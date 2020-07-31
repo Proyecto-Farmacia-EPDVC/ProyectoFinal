@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmDetalles_venta
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmDetalles_venta
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalles_venta))
         Me.btnimprimir = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtstock = New System.Windows.Forms.NumericUpDown()
@@ -50,7 +51,6 @@ Partial Class frmDetalles_venta
         Me.datalistado = New System.Windows.Forms.DataGridView()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
-        Me.btnsalir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.txtstock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,12 +60,16 @@ Partial Class frmDetalles_venta
         '
         'btnimprimir
         '
-        Me.btnimprimir.Location = New System.Drawing.Point(757, 337)
-        Me.btnimprimir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnimprimir.BackgroundImage = CType(resources.GetObject("btnimprimir.BackgroundImage"), System.Drawing.Image)
+        Me.btnimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnimprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnimprimir.Location = New System.Drawing.Point(783, 461)
+        Me.btnimprimir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnimprimir.Name = "btnimprimir"
-        Me.btnimprimir.Size = New System.Drawing.Size(105, 50)
+        Me.btnimprimir.Size = New System.Drawing.Size(86, 43)
         Me.btnimprimir.TabIndex = 23
         Me.btnimprimir.Text = "Imprimir"
+        Me.btnimprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnimprimir.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -91,218 +95,229 @@ Partial Class frmDetalles_venta
         Me.GroupBox1.Controls.Add(Me.txtidcliente)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtidventa)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 11)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(78, 97)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(365, 366)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(396, 420)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mantenimiento"
         '
         'txtstock
         '
-        Me.txtstock.Location = New System.Drawing.Point(252, 260)
-        Me.txtstock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtstock.Location = New System.Drawing.Point(265, 321)
+        Me.txtstock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtstock.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.txtstock.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtstock.Name = "txtstock"
-        Me.txtstock.Size = New System.Drawing.Size(107, 22)
+        Me.txtstock.Size = New System.Drawing.Size(80, 26)
         Me.txtstock.TabIndex = 30
         Me.txtstock.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(78, 260)
-        Me.txtcantidad.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtcantidad.Location = New System.Drawing.Point(98, 317)
+        Me.txtcantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtcantidad.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(107, 22)
+        Me.txtcantidad.Size = New System.Drawing.Size(80, 26)
         Me.txtcantidad.TabIndex = 29
         '
         'txtprecio_unitario
         '
-        Me.txtprecio_unitario.Location = New System.Drawing.Point(101, 300)
-        Me.txtprecio_unitario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtprecio_unitario.Location = New System.Drawing.Point(135, 358)
+        Me.txtprecio_unitario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtprecio_unitario.MaxLength = 9
         Me.txtprecio_unitario.Name = "txtprecio_unitario"
-        Me.txtprecio_unitario.Size = New System.Drawing.Size(92, 22)
+        Me.txtprecio_unitario.Size = New System.Drawing.Size(70, 26)
         Me.txtprecio_unitario.TabIndex = 28
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(-4, 302)
+        Me.Label9.Location = New System.Drawing.Point(4, 364)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(101, 17)
+        Me.Label9.Size = New System.Drawing.Size(127, 20)
         Me.Label9.TabIndex = 27
         Me.Label9.Text = "Precio Unitario" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(203, 263)
+        Me.Label8.Location = New System.Drawing.Point(197, 323)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 17)
+        Me.Label8.Size = New System.Drawing.Size(55, 20)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "Stock"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 263)
+        Me.Label7.Location = New System.Drawing.Point(4, 323)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 17)
+        Me.Label7.Size = New System.Drawing.Size(81, 20)
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Cantidad"
         '
         'btnBuscarProducto
         '
-        Me.btnBuscarProducto.Location = New System.Drawing.Point(320, 220)
-        Me.btnBuscarProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnBuscarProducto.Location = New System.Drawing.Point(278, 281)
+        Me.btnBuscarProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBuscarProducto.Name = "btnBuscarProducto"
-        Me.btnBuscarProducto.Size = New System.Drawing.Size(53, 22)
+        Me.btnBuscarProducto.Size = New System.Drawing.Size(40, 18)
         Me.btnBuscarProducto.TabIndex = 24
         Me.btnBuscarProducto.Text = "..."
         Me.btnBuscarProducto.UseVisualStyleBackColor = True
         '
         'txtnom_producto
         '
-        Me.txtnom_producto.Location = New System.Drawing.Point(142, 222)
-        Me.txtnom_producto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtnom_producto.Location = New System.Drawing.Point(130, 276)
+        Me.txtnom_producto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtnom_producto.Name = "txtnom_producto"
         Me.txtnom_producto.ReadOnly = True
-        Me.txtnom_producto.Size = New System.Drawing.Size(173, 22)
+        Me.txtnom_producto.Size = New System.Drawing.Size(131, 26)
         Me.txtnom_producto.TabIndex = 23
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 226)
+        Me.Label6.Location = New System.Drawing.Point(4, 279)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 17)
+        Me.Label6.Size = New System.Drawing.Size(81, 20)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "Producto"
         '
         'txtidproducto
         '
-        Me.txtidproducto.Location = New System.Drawing.Point(101, 220)
-        Me.txtidproducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtidproducto.Location = New System.Drawing.Point(98, 276)
+        Me.txtidproducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtidproducto.Name = "txtidproducto"
         Me.txtidproducto.ReadOnly = True
-        Me.txtidproducto.Size = New System.Drawing.Size(36, 22)
+        Me.txtidproducto.Size = New System.Drawing.Size(28, 26)
         Me.txtidproducto.TabIndex = 21
         '
         'CMBtipo_documento
         '
         Me.CMBtipo_documento.FormattingEnabled = True
         Me.CMBtipo_documento.Items.AddRange(New Object() {"Boleta", "Factura"})
-        Me.CMBtipo_documento.Location = New System.Drawing.Point(101, 150)
-        Me.CMBtipo_documento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CMBtipo_documento.Location = New System.Drawing.Point(116, 185)
+        Me.CMBtipo_documento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CMBtipo_documento.Name = "CMBtipo_documento"
-        Me.CMBtipo_documento.Size = New System.Drawing.Size(235, 24)
+        Me.CMBtipo_documento.Size = New System.Drawing.Size(177, 28)
         Me.CMBtipo_documento.TabIndex = 20
         Me.CMBtipo_documento.Text = "Factura"
         '
         'txtfecha
         '
         Me.txtfecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtfecha.Location = New System.Drawing.Point(101, 110)
-        Me.txtfecha.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtfecha.Location = New System.Drawing.Point(103, 143)
+        Me.txtfecha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtfecha.Name = "txtfecha"
-        Me.txtfecha.Size = New System.Drawing.Size(235, 22)
+        Me.txtfecha.Size = New System.Drawing.Size(177, 26)
         Me.txtfecha.TabIndex = 19
         '
         'txtnombre_cliente
         '
-        Me.txtnombre_cliente.Location = New System.Drawing.Point(142, 74)
-        Me.txtnombre_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtnombre_cliente.Location = New System.Drawing.Point(138, 103)
+        Me.txtnombre_cliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtnombre_cliente.Name = "txtnombre_cliente"
         Me.txtnombre_cliente.ReadOnly = True
-        Me.txtnombre_cliente.Size = New System.Drawing.Size(173, 22)
+        Me.txtnombre_cliente.Size = New System.Drawing.Size(131, 26)
         Me.txtnombre_cliente.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(5, 188)
+        Me.Label5.Location = New System.Drawing.Point(6, 230)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(87, 17)
+        Me.Label5.Size = New System.Drawing.Size(108, 20)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Numero Doc"
         '
         'txtnum_documento
         '
-        Me.txtnum_documento.Location = New System.Drawing.Point(101, 183)
-        Me.txtnum_documento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtnum_documento.Location = New System.Drawing.Point(118, 224)
+        Me.txtnum_documento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtnum_documento.MaxLength = 9
         Me.txtnum_documento.Name = "txtnum_documento"
-        Me.txtnum_documento.Size = New System.Drawing.Size(235, 22)
+        Me.txtnum_documento.Size = New System.Drawing.Size(177, 26)
         Me.txtnum_documento.TabIndex = 8
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 151)
+        Me.Label4.Location = New System.Drawing.Point(4, 193)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 17)
+        Me.Label4.Size = New System.Drawing.Size(80, 20)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Tipo Doc"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(5, 116)
+        Me.Label3.Location = New System.Drawing.Point(8, 143)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 17)
+        Me.Label3.Size = New System.Drawing.Size(59, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Fecha"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(5, 78)
+        Me.Label2.Location = New System.Drawing.Point(8, 106)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 17)
+        Me.Label2.Size = New System.Drawing.Size(65, 20)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Cliente"
         '
         'txtidcliente
         '
-        Me.txtidcliente.Location = New System.Drawing.Point(101, 74)
-        Me.txtidcliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtidcliente.Location = New System.Drawing.Point(103, 103)
+        Me.txtidcliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtidcliente.Name = "txtidcliente"
         Me.txtidcliente.ReadOnly = True
-        Me.txtidcliente.Size = New System.Drawing.Size(36, 22)
+        Me.txtidcliente.Size = New System.Drawing.Size(28, 26)
         Me.txtidcliente.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(5, 52)
+        Me.Label1.Location = New System.Drawing.Point(4, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 17)
+        Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID venta"
         '
         'txtidventa
         '
-        Me.txtidventa.Location = New System.Drawing.Point(101, 46)
-        Me.txtidventa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtidventa.Location = New System.Drawing.Point(114, 52)
+        Me.txtidventa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtidventa.Name = "txtidventa"
         Me.txtidventa.ReadOnly = True
-        Me.txtidventa.Size = New System.Drawing.Size(235, 22)
+        Me.txtidventa.Size = New System.Drawing.Size(177, 26)
         Me.txtidventa.TabIndex = 0
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.inexistente)
         Me.GroupBox2.Controls.Add(Me.datalistado)
-        Me.GroupBox2.Location = New System.Drawing.Point(383, 13)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(489, 116)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(539, 318)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(541, 298)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "lista articulos"
@@ -310,9 +325,10 @@ Partial Class frmDetalles_venta
         'inexistente
         '
         Me.inexistente.AutoSize = True
-        Me.inexistente.Location = New System.Drawing.Point(222, 130)
+        Me.inexistente.Location = New System.Drawing.Point(220, 166)
+        Me.inexistente.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.inexistente.Name = "inexistente"
-        Me.inexistente.Size = New System.Drawing.Size(123, 17)
+        Me.inexistente.Size = New System.Drawing.Size(160, 20)
         Me.inexistente.TabIndex = 17
         Me.inexistente.TabStop = True
         Me.inexistente.Text = "Datos Inexistentes"
@@ -322,57 +338,57 @@ Partial Class frmDetalles_venta
         Me.datalistado.AllowUserToAddRows = False
         Me.datalistado.AllowUserToDeleteRows = False
         Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datalistado.Location = New System.Drawing.Point(5, 44)
-        Me.datalistado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.datalistado.Location = New System.Drawing.Point(27, 52)
+        Me.datalistado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
         Me.datalistado.RowHeadersWidth = 51
         Me.datalistado.RowTemplate.Height = 28
         Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(528, 201)
+        Me.datalistado.Size = New System.Drawing.Size(484, 207)
         Me.datalistado.TabIndex = 0
         '
         'btnguardar
         '
-        Me.btnguardar.Location = New System.Drawing.Point(538, 337)
-        Me.btnguardar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnguardar.BackgroundImage = CType(resources.GetObject("btnguardar.BackgroundImage"), System.Drawing.Image)
+        Me.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnguardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnguardar.Location = New System.Drawing.Point(665, 461)
+        Me.btnguardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(105, 50)
+        Me.btnguardar.Size = New System.Drawing.Size(84, 43)
         Me.btnguardar.TabIndex = 22
-        Me.btnguardar.Text = "Agregar Articulo"
+        Me.btnguardar.Text = "Agregar"
+        Me.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnguardar.UseVisualStyleBackColor = True
         '
         'btnnuevo
         '
-        Me.btnnuevo.Location = New System.Drawing.Point(417, 337)
-        Me.btnnuevo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnnuevo.BackgroundImage = CType(resources.GetObject("btnnuevo.BackgroundImage"), System.Drawing.Image)
+        Me.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnnuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnnuevo.Location = New System.Drawing.Point(549, 461)
+        Me.btnnuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(114, 50)
+        Me.btnnuevo.Size = New System.Drawing.Size(86, 43)
         Me.btnnuevo.TabIndex = 20
         Me.btnnuevo.Text = "Nuevo"
+        Me.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnnuevo.UseVisualStyleBackColor = True
-        '
-        'btnsalir
-        '
-        Me.btnsalir.Location = New System.Drawing.Point(646, 337)
-        Me.btnsalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnsalir.Name = "btnsalir"
-        Me.btnsalir.Size = New System.Drawing.Size(105, 50)
-        Me.btnsalir.TabIndex = 21
-        Me.btnsalir.Text = "Salir"
-        Me.btnsalir.UseVisualStyleBackColor = True
         '
         'frmDetalles_venta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 406)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1080, 612)
         Me.Controls.Add(Me.btnimprimir)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnguardar)
         Me.Controls.Add(Me.btnnuevo)
-        Me.Controls.Add(Me.btnsalir)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmDetalles_venta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmDetalles_venta"
@@ -415,5 +431,4 @@ Partial Class frmDetalles_venta
     Friend WithEvents datalistado As DataGridView
     Friend WithEvents btnguardar As Button
     Friend WithEvents btnnuevo As Button
-    Friend WithEvents btnsalir As Button
 End Class
