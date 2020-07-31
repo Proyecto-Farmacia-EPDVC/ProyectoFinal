@@ -91,7 +91,7 @@ Public Class frmCompra
         mostrar_compraPro()
     End Sub
 
-    Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
+    Private Sub btnsalir_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
@@ -102,5 +102,13 @@ Public Class frmCompra
     Private Sub btnbuscarPro_Click(sender As Object, e As EventArgs) Handles btnbuscarPro.Click
         frmProveedor.txtflag.Text = "2"
         frmProveedor.ShowDialog()
+    End Sub
+
+    Private Sub txtidcompra_TextChanged(sender As Object, e As EventArgs) Handles txtidcompra.TextChanged
+
+    End Sub
+
+    Private Sub txtnombre_proveedor_TextChanged(sender As Object, e As EventArgs) Handles txtnombre_proveedor.TextChanged
+
     End Sub
 End Class
