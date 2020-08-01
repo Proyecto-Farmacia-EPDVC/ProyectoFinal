@@ -9,7 +9,10 @@ Public Class FarmaciaGerente
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Normal
+        Me.Size = New System.Drawing.Size(1275, 630)
         abrirFormulario(frmhora)
+
     End Sub
 
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs)
@@ -43,16 +46,16 @@ Public Class FarmaciaGerente
 
     End Sub
 
-    Private Sub PanelForms_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
     Private Sub btnMinimizar_Click_1(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub btnCerrar_Click_1(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        End
+        Dim opcion As DialogResult
+        opcion = MessageBox.Show("¿Esta Seguro que quiere salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If opcion = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BarraTitulo_Paint(sender As Object, e As PaintEventArgs) Handles BarraTitulo.Paint
@@ -64,15 +67,52 @@ Public Class FarmaciaGerente
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub PanelForms_Paint_1(sender As Object, e As PaintEventArgs) Handles PanelForms.Paint
-
-    End Sub
-
-    Private Sub btnlogohora_Click(sender As Object, e As EventArgs) 
+    Private Sub btnlogohora_Click(sender As Object, e As EventArgs)
         abrirFormulario(frmhora)
     End Sub
 
-    Private Sub panel4_Paint(sender As Object, e As PaintEventArgs) Handles panel4.Paint
+    Private Sub btnventas_Click(sender As Object, e As EventArgs) Handles btnventas.Click
+        abrirFormulario(frmVenta)
+    End Sub
 
+    Private Sub btnproductos_Click(sender As Object, e As EventArgs) Handles btnproductos.Click
+        abrirFormulario(frmProductos)
+    End Sub
+
+    Private Sub btnclientes_Click(sender As Object, e As EventArgs) Handles btnclientes.Click
+        abrirFormulario(FrmCliente)
+    End Sub
+
+    Private Sub btncategoria_Click(sender As Object, e As EventArgs) Handles btncategoria.Click
+        abrirFormulario(frmCategoria)
+    End Sub
+
+    Private Sub btnempleados_Click(sender As Object, e As EventArgs) Handles btnempleados.Click
+        abrirFormulario(frmEmpleado)
+    End Sub
+
+    Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
+
+    End Sub
+
+    Private Sub btnproveedor_Click(sender As Object, e As EventArgs) Handles btnproveedor.Click
+        abrirFormulario(frmProveedor)
+    End Sub
+
+    Private Sub btncompras_Click(sender As Object, e As EventArgs) Handles btncompras.Click
+        abrirFormulario(frmCompra)
+    End Sub
+
+    Private Sub PanelForms_Paint(sender As Object, e As PaintEventArgs) Handles PanelForms.Paint
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        abrirFormulario(frmhora)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        LoginFarmacia.ShowDialog()
+        frmhora.Close()
     End Sub
 End Class

@@ -1,1 +1,1 @@
-﻿Me.WindowState = FormWindowState.Minimized
+﻿
