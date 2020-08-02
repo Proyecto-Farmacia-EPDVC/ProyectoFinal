@@ -30,18 +30,17 @@ Public Class frmVenta
         End Try
         btnnuevo.Visible = True
         btneditar.Visible = False
-
-
     End Sub
+
     Public Sub limpiar()
         btnguardar.Visible = True
         btneditar.Visible = False
         txtidcliente.Text = ""
         txtnombre_cliente.Text = ""
         txtnum_documento.Text = ""
-
         txtidventa.Text = ""
     End Sub
+
     Private Sub buscar()
         Try
             dt = conexion.busqueda(" ventas ", " idventa like '%" + txtbuscar.Text + "%'")
@@ -154,7 +153,6 @@ Public Class frmVenta
         txtfecha.Text = datalistado.Rows(FilaActual).Cells(6).Value
         CMBtipo_documento.Text = datalistado.Rows(FilaActual).Cells(7).Value
         txtnum_documento.Text = datalistado.Rows(FilaActual).Cells(8).Value
-
         btnguardar.Visible = False
         btneditar.Visible = True
     End Sub
@@ -165,47 +163,39 @@ Public Class frmVenta
     End Sub
 
     Private Sub txtidcliente_Validating(sender As Object, e As CancelEventArgs) Handles txtidcliente.Validating
-        'Try
-        '    If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-        '        Me.ErrorValidacion.SetError(sender, "")
-        '    Else
-        '        Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
-    End Sub
-
-    Private Sub txtnombre_cliente_TextChanged(sender As Object, e As EventArgs) Handles txtnombre_cliente.TextChanged
-
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub txtnombre_cliente_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre_cliente.Validating
-        'Try
-        '    If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-        '        Me.ErrorValidacion.SetError(sender, "")
-        '    Else
-        '        Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
-    End Sub
-
-    Private Sub txtnum_documento_TextChanged(sender As Object, e As EventArgs) Handles txtnum_documento.TextChanged
-
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub txtnum_documento_Validating(sender As Object, e As CancelEventArgs) Handles txtnum_documento.Validating
-        'Try
-        '    If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-        '        Me.ErrorValidacion.SetError(sender, "")
-        '    Else
-        '        Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub cargar_detalle()
@@ -219,8 +209,6 @@ Public Class frmVenta
         frmDetalles_venta.ShowDialog()
     End Sub
 
-
-
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
         MostrarClientes.txtflag.Text = "1"
         MostrarClientes.ShowDialog()
@@ -231,9 +219,11 @@ Public Class frmVenta
         MostrarEmpleados.ShowDialog()
     End Sub
 
-
-
     Private Sub datalistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellDoubleClick
         cargar_detalle()
+    End Sub
+
+    Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
+        buscar()
     End Sub
 End Class

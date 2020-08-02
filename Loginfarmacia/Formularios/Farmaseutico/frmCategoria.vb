@@ -40,9 +40,7 @@ Public Class frmCategoria
     End Sub
     Private Sub buscar()
         Try
-
             dt = conexion.busqueda(" categoria ", " nombre_categoria like '%" + txtbuscar.Text + "%'")
-
 
             If dt.Rows.Count <> 0 Then
 
@@ -89,10 +87,11 @@ Public Class frmCategoria
     End Sub
 
     Private Sub insertarCategoria()
-        Dim nombre_categoria As String
-        nombre_categoria = txtnombre.Text
+        Dim mayus As String
 
-
+        mayus = txtnombre.Text
+        Dim nombre_categoria As String = StrConv(mayus, VbStrConv.ProperCase)
+        txtnombre.Text = nombre_categoria
         Try
             If conexion.insertarCategoria(nombre_categoria) Then
 
@@ -109,7 +108,6 @@ Public Class frmCategoria
         Dim nombre_categoria As String
         idcategoria = txtidcategoria.Text
         nombre_categoria = txtnombre.Text
-
 
         Try
             If conexion.editarCategoria(idcategoria, nombre_categoria) Then
@@ -146,8 +144,6 @@ Public Class frmCategoria
         buscar()
     End Sub
 
-
-
     Private Sub btneditar_Click(sender As Object, e As EventArgs) Handles btneditar.Click
         Dim result As DialogResult
         result = MessageBox.Show("Realmente desea editar os datos de la Categoria?", "Modifiar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
@@ -170,22 +166,6 @@ Public Class frmCategoria
             limpiar()
         End If
     End Sub
-
-    Private Sub txtidcategoria_TextChanged(sender As Object, e As EventArgs) Handles txtidcategoria.TextChanged
-
-    End Sub
-
-
-
-    Private Sub txtflag_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub datalistado_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
-
-
 
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
         Dim FilaActual As Integer

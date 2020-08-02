@@ -6,7 +6,6 @@ Public Class frmDetalles_venta
 
     Private Sub frmDetalles_venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar_Dventas()
-
     End Sub
     Public Sub mostrar_Dventas()
         Try
@@ -28,8 +27,6 @@ Public Class frmDetalles_venta
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-
         'buscar()
     End Sub
     Public Sub limpiar()
@@ -39,9 +36,7 @@ Public Class frmDetalles_venta
         txtprecio_unitario.Text = ""
         txtcantidad.Value = 0
         txtstock.Value = 1
-
     End Sub
-
 
     Private Sub ocultar_columnas()
         datalistado.Columns(0).Visible = False
@@ -58,13 +53,10 @@ Public Class frmDetalles_venta
         cantidad = txtcantidad.Text
         precio_unitario = txtprecio_unitario.Text
 
-
         If conexion.disminuir_stock(idproducto, cantidad) Then
-
         End If
         Try
             If conexion.insertarDetallesVenta(idventa, idproducto, cantidad, precio_unitario) Then
-
             Else
                 MessageBox.Show("Error al guardar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -72,8 +64,6 @@ Public Class frmDetalles_venta
             MsgBox(ex.Message)
         End Try
     End Sub
-
-
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         If Me.ValidateChildren = True And txtidproducto.Text <> "" And txtcantidad.Text <> "" And txtprecio_unitario.Text <> "" Then
@@ -121,14 +111,6 @@ Public Class frmDetalles_venta
     Private Sub btnimprimir_Click(sender As Object, e As EventArgs) Handles btnimprimir.Click
         frmReporte.txtidventa.Text = Me.txtidventa.Text
         frmReporte.ShowDialog()
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

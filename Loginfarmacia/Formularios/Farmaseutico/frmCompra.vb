@@ -58,7 +58,6 @@ Public Class frmCompra
         fechaCompra = txtfechaCompra.Text
 
         If conexion.aumentar_stock(idproducto, cantidad) Then
-
         End If
         Try
             If conexion.insertarCompraProveedor(idProveedor, idproducto, PrecioCompra, cantidad, fechaCompra) Then
@@ -104,15 +103,4 @@ Public Class frmCompra
         MostrarProveedor.ShowDialog()
     End Sub
 
-    Private Sub txtidcompra_TextChanged(sender As Object, e As EventArgs) Handles txtidcompra.TextChanged
-
-    End Sub
-
-    Private Sub txtnombre_proveedor_TextChanged(sender As Object, e As EventArgs) Handles txtnombre_proveedor.TextChanged
-
-    End Sub
-
-    Private Sub txtfechaCompra_ValueChanged(sender As Object, e As EventArgs) Handles txtfechaCompra.ValueChanged
-
-    End Sub
 End Class

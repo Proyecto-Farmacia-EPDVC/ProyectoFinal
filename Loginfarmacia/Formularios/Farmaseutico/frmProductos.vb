@@ -56,12 +56,9 @@ Public Class frmProductos
 
     Private Sub buscar()
         Try
-
             dt = conexion.busqueda(" producto", " nombre like '%" + txtbuscar.Text + "%'")
 
-
             If dt.Rows.Count <> 0 Then
-
                 datalistado.DataSource = dt
                 conexion.conexion.Close()
                 ocultar_columnas()
@@ -69,8 +66,6 @@ Public Class frmProductos
                 datalistado.DataSource = Nothing
                 conexion.conexion.Close()
             End If
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -83,13 +78,17 @@ Public Class frmProductos
 
     Private Sub insertarProducto()
         Dim idcategoria As Integer
-        Dim nombre, descripcion As String
+        Dim descripcion As String
         Dim stock, precio_compra, precio_venta As Double
         Dim fecha_vencimiento As Date
         Dim imagenD() As Byte
+        Dim mayus As String
 
         idcategoria = txtidcategoria.Text
-        nombre = txtnombre.Text
+        mayus = txtnombre.Text
+        Dim nombre As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombre
         descripcion = txtdescripcion.Text
         stock = txtstock.Text
         precio_compra = txtprecio_compra.Text
@@ -119,13 +118,16 @@ Public Class frmProductos
     Private Sub editarProducto()
 
         Dim idcategoria, idproducto As Integer
-        Dim nombre, descripcion As String
+        Dim descripcion, mayus As String
         Dim stock, precio_compra, precio_venta As Double
         Dim fecha_vencimiento As Date
         Dim imagenD() As Byte
         idproducto = txtidproducto.Text
         idcategoria = txtidcategoria.Text
-        nombre = txtnombre.Text
+        mayus = txtnombre.Text
+        Dim nombre As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombre
         descripcion = txtdescripcion.Text
         stock = txtstock.Text
         precio_compra = txtprecio_compra.Text
@@ -151,10 +153,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub btncancelar_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub btncargar_Click(sender As Object, e As EventArgs) Handles btncargar.Click
         If DLG.ShowDialog = DialogResult.OK Then
             imagen.BackgroundImage = Nothing
@@ -165,7 +163,6 @@ Public Class frmProductos
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         imagen.Image = My.Resources.transparente
-
     End Sub
 
     Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
@@ -174,7 +171,6 @@ Public Class frmProductos
     End Sub
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-
         If Me.ValidateChildren = True And txtnombre.Text <> "" And txtdescripcion.Text <> "" And txtstock.Text <> "" And txtprecio_compra.Text <> "" And txtprecio_venta.Text <> "" Then
             Try
                 insertarProducto()
@@ -212,10 +208,6 @@ Public Class frmProductos
         End If
     End Sub
 
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
     Private Sub btnbuscarcategoria_Click(sender As Object, e As EventArgs) Handles btnbuscarcategoria.Click
         MostrarCategoria.txtflag.Text = "1"
         MostrarCategoria.ShowDialog()
@@ -223,10 +215,6 @@ Public Class frmProductos
 
     Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
         buscar()
-    End Sub
-
-    Private Sub txtidproducto_TextChanged(sender As Object, e As EventArgs) Handles txtidproducto.TextChanged
-
     End Sub
 
     Private Sub txtidproducto_Validating(sender As Object, e As CancelEventArgs) Handles txtidproducto.Validating
@@ -239,10 +227,6 @@ Public Class frmProductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
-
     End Sub
 
     Private Sub txtnombre_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre.Validating
@@ -269,10 +253,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub txtnom_categoria_TextChanged(sender As Object, e As EventArgs) Handles txtnom_categoria.TextChanged
-
-    End Sub
-
     Private Sub txtnom_categoria_Validating(sender As Object, e As CancelEventArgs) Handles txtnom_categoria.Validating
         Try
             If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
@@ -283,10 +263,6 @@ Public Class frmProductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub txtdescripcion_TextChanged(sender As Object, e As EventArgs) Handles txtdescripcion.TextChanged
-
     End Sub
 
     Private Sub txtdescripcion_Validating(sender As Object, e As CancelEventArgs) Handles txtdescripcion.Validating
@@ -301,10 +277,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub txtstock_TextChanged(sender As Object, e As EventArgs) Handles txtstock.TextChanged
-
-    End Sub
-
     Private Sub txtstock_Validating(sender As Object, e As CancelEventArgs) Handles txtstock.Validating
         Try
             If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
@@ -315,10 +287,6 @@ Public Class frmProductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub txtprecio_compra_TextChanged(sender As Object, e As EventArgs) Handles txtprecio_compra.TextChanged
-
     End Sub
 
     Private Sub txtprecio_compra_Validating(sender As Object, e As CancelEventArgs) Handles txtprecio_compra.Validating
@@ -333,10 +301,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub txtprecio_venta_TextChanged(sender As Object, e As EventArgs) Handles txtprecio_venta.TextChanged
-
-    End Sub
-
     Private Sub txtprecio_venta_Validating(sender As Object, e As CancelEventArgs) Handles txtprecio_venta.Validating
         Try
             If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
@@ -347,12 +311,6 @@ Public Class frmProductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-
-
-    Private Sub datalistado_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
     End Sub
 
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
@@ -377,10 +335,4 @@ Public Class frmProductos
         btnguardar.Visible = False
         btneditar.Visible = True
     End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-
 End Class

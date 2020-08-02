@@ -33,7 +33,6 @@ Public Class frmEmpleado
         btnnuevo.Visible = True
         btneditar.Visible = False
 
-
     End Sub
     Public Sub limpiar()
         btnguardar.Visible = True
@@ -47,12 +46,9 @@ Public Class frmEmpleado
     End Sub
     Private Sub buscar()
         Try
-
             dt = conexion.busqueda("Empleados", "CONCAT(Nombres,' ',Apellidos) like '%" + txtbuscar.Text + "%'")
-
             mostrar()
             If dt.Rows.Count <> 0 Then
-
                 datalistado.DataSource = dt
                 conexion.conexion.Close()
                 ' ocultar_columnas()
@@ -73,13 +69,18 @@ Public Class frmEmpleado
 
     Private Sub insertarEmpleado()
         Dim idEmpleado As String
-        Dim nombres, apellidos, Tel, estado, contrasena, rol As String
+        Dim Tel, estado, contrasena, rol As String
         Dim sexo As Char
         Dim fechanacimiento As Date
+        Dim mayus, mayus1 As String
 
         idEmpleado = txtidempleado.Text
-        nombres = txtnombre.Text
-        apellidos = txtapellidos.Text
+        mayus = txtnombre.Text
+        Dim nombres As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombres
+        mayus1 = txtapellidos.Text
+        Dim apellidos As String = StrConv(mayus1, VbStrConv.ProperCase)
         fechanacimiento = txtfechaN.Text
         Tel = txttelefono.Text
         sexo = cmbSexo.Text
@@ -100,13 +101,18 @@ Public Class frmEmpleado
 
     Private Sub editarEmpleado()
         Dim idEmpleado As String
-        Dim nombres, apellidos, Tel, estado, contrasena, rol As String
+        Dim Tel, estado, contrasena, rol As String
         Dim sexo As Char
         Dim fechanacimiento As Date
+        Dim mayus, mayus1 As String
 
         idEmpleado = txtidempleado.Text
-        nombres = txtnombre.Text
-        apellidos = txtapellidos.Text
+        mayus = txtnombre.Text
+        Dim nombres As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombres
+        mayus1 = txtapellidos.Text
+        Dim apellidos As String = StrConv(mayus1, VbStrConv.ProperCase)
         fechanacimiento = txtfechaN.Text
         Tel = txttelefono.Text
         sexo = cmbSexo.Text
@@ -172,7 +178,6 @@ Public Class frmEmpleado
         End If
     End Sub
 
-
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Dim OPC As DialogResult
         OPC = MessageBox.Show("¿Seguro que desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -180,12 +185,6 @@ Public Class frmEmpleado
             Close()
         End If
     End Sub
-
-
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
-
 
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
         Dim FilaActual As Integer

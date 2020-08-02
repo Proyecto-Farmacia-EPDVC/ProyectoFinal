@@ -6,7 +6,6 @@ Public Class FrmCliente
 
     Private Sub FrmCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
-
     End Sub
 
     Public Sub mostrar()
@@ -47,12 +46,9 @@ Public Class FrmCliente
     End Sub
     Private Sub buscar()
         Try
-
             dt = conexion.busqueda(" cliente ", " CONCAT(nombre,' ',apellidos) like '%" + txtbuscar.Text + "%'")
 
-
             If dt.Rows.Count <> 0 Then
-
                 datalistado.DataSource = dt
                 conexion.conexion.Close()
                 ocultar_columnas()
@@ -60,8 +56,6 @@ Public Class FrmCliente
                 datalistado.DataSource = Nothing
                 conexion.conexion.Close()
             End If
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -71,23 +65,18 @@ Public Class FrmCliente
         datalistado.Columns(1).Visible = False
     End Sub
 
-    Private Sub txtidcliente_TextChanged(sender As Object, e As EventArgs) Handles txtidcliente.TextChanged
-
-    End Sub
-
-    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
-
-    End Sub
-
-
-
-
-
     Private Sub insertarCliente()
         'Dim idcliente As Integer
-        Dim nombre, apellidos, direccion, telefono, dni As String
-        nombre = txtnombre.Text
-        apellidos = txtapellidos.Text
+        Dim direccion, telefono, dni As String
+        Dim mayus, mayus1 As String
+
+        mayus = txtnombre.Text
+        Dim nombre As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombre
+        'nombre = txtNombre.Text
+        mayus1 = txtapellidos.Text
+        Dim apellidos As String = StrConv(mayus1, VbStrConv.ProperCase)
         direccion = txtdireccion.Text
         telefono = txttelefono.Text
         dni = txtdni.Text
@@ -105,10 +94,17 @@ Public Class FrmCliente
 
     Private Sub editarCliente()
         Dim idcliente As Integer
-        Dim nombre, apellidos, direccion, telefono, dni As String
+        Dim direccion, telefono, dni As String
+        Dim mayus, mayus1 As String
+
+        mayus = txtnombre.Text
+        Dim nombre As String = StrConv(mayus, VbStrConv.ProperCase)
+
+        txtnombre.Text = nombre
+
+        mayus1 = txtapellidos.Text
+        Dim apellidos As String = StrConv(mayus1, VbStrConv.ProperCase)
         idcliente = txtidcliente.Text
-        nombre = txtnombre.Text
-        apellidos = txtapellidos.Text
         direccion = txtdireccion.Text
         telefono = txttelefono.Text
         dni = txtdni.Text
@@ -148,10 +144,6 @@ Public Class FrmCliente
         buscar()
     End Sub
 
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
-
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
         Dim FilaActual As Integer
         FilaActual = datalistado.CurrentRow.Index
@@ -189,13 +181,8 @@ Public Class FrmCliente
         End If
     End Sub
 
-
-
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
-    End Sub
 End Class

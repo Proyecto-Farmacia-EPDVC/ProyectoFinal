@@ -53,11 +53,12 @@ Partial Class LoginFarmacia
         Me.txtnombreusuario.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtnombreusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtnombreusuario.ForeColor = System.Drawing.Color.White
-        Me.txtnombreusuario.Location = New System.Drawing.Point(87, 100)
+        Me.txtnombreusuario.Location = New System.Drawing.Point(116, 123)
+        Me.txtnombreusuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtnombreusuario.MaxLength = 13
         Me.txtnombreusuario.Multiline = True
         Me.txtnombreusuario.Name = "txtnombreusuario"
-        Me.txtnombreusuario.Size = New System.Drawing.Size(344, 25)
+        Me.txtnombreusuario.Size = New System.Drawing.Size(459, 31)
         Me.txtnombreusuario.TabIndex = 0
         '
         'btnlogin
@@ -69,9 +70,10 @@ Partial Class LoginFarmacia
         Me.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnlogin.Image = CType(resources.GetObject("btnlogin.Image"), System.Drawing.Image)
         Me.btnlogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnlogin.Location = New System.Drawing.Point(116, 320)
+        Me.btnlogin.Location = New System.Drawing.Point(155, 394)
+        Me.btnlogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(405, 68)
+        Me.btnlogin.Size = New System.Drawing.Size(540, 84)
         Me.btnlogin.TabIndex = 2
         Me.btnlogin.Text = "INGRESAR"
         Me.btnlogin.UseVisualStyleBackColor = False
@@ -81,10 +83,9 @@ Partial Class LoginFarmacia
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(-2, -2)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(-3, -2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(616, 46)
+        Me.Label1.Size = New System.Drawing.Size(821, 57)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Farmacia sin nombre"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -97,10 +98,10 @@ Partial Class LoginFarmacia
         Me.cmbrol.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbrol.ForeColor = System.Drawing.Color.White
         Me.cmbrol.FormattingEnabled = True
-        Me.cmbrol.Location = New System.Drawing.Point(89, 157)
-        Me.cmbrol.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbrol.Location = New System.Drawing.Point(119, 193)
+        Me.cmbrol.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbrol.Name = "cmbrol"
-        Me.cmbrol.Size = New System.Drawing.Size(342, 32)
+        Me.cmbrol.Size = New System.Drawing.Size(455, 37)
         Me.cmbrol.TabIndex = 4
         '
         'PictureBox1
@@ -108,10 +109,10 @@ Partial Class LoginFarmacia
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(573, -2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(764, -2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(42, 46)
+        Me.PictureBox1.Size = New System.Drawing.Size(56, 57)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
@@ -119,10 +120,9 @@ Partial Class LoginFarmacia
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(84, 121)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(112, 149)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(346, 18)
+        Me.Label2.Size = New System.Drawing.Size(461, 22)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "_________________________________________________________________________"
         '
@@ -131,10 +131,9 @@ Partial Class LoginFarmacia
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(81, 63)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(108, 78)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(151, 26)
+        Me.Label3.Size = New System.Drawing.Size(184, 31)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "ID USUARIO"
         '
@@ -143,10 +142,10 @@ Partial Class LoginFarmacia
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 73)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Location = New System.Drawing.Point(19, 90)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(63, 53)
+        Me.PictureBox2.Size = New System.Drawing.Size(84, 65)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
@@ -154,10 +153,9 @@ Partial Class LoginFarmacia
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(87, 186)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(116, 229)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(344, 18)
+        Me.Label6.Size = New System.Drawing.Size(459, 22)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "_________________________________________________________________________"
         '
@@ -166,10 +164,10 @@ Partial Class LoginFarmacia
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(14, 151)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Location = New System.Drawing.Point(19, 186)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(63, 53)
+        Me.PictureBox4.Size = New System.Drawing.Size(84, 65)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 13
         Me.PictureBox4.TabStop = False
@@ -179,10 +177,10 @@ Partial Class LoginFarmacia
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(14, 239)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Location = New System.Drawing.Point(19, 294)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(63, 53)
+        Me.PictureBox3.Size = New System.Drawing.Size(84, 65)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 16
         Me.PictureBox3.TabStop = False
@@ -193,11 +191,12 @@ Partial Class LoginFarmacia
         Me.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtcontraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcontraseña.ForeColor = System.Drawing.Color.White
-        Me.txtcontraseña.Location = New System.Drawing.Point(87, 268)
+        Me.txtcontraseña.Location = New System.Drawing.Point(116, 330)
+        Me.txtcontraseña.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtcontraseña.Multiline = True
         Me.txtcontraseña.Name = "txtcontraseña"
         Me.txtcontraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtcontraseña.Size = New System.Drawing.Size(344, 25)
+        Me.txtcontraseña.Size = New System.Drawing.Size(459, 31)
         Me.txtcontraseña.TabIndex = 14
         '
         'Label4
@@ -206,20 +205,18 @@ Partial Class LoginFarmacia
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(81, 228)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(108, 281)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(175, 26)
+        Me.Label4.Size = New System.Drawing.Size(214, 31)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "CONTRASEÑA"
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(87, 286)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(116, 352)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(344, 18)
+        Me.Label5.Size = New System.Drawing.Size(459, 22)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "_________________________________________________________________________"
         '
@@ -229,11 +226,11 @@ Partial Class LoginFarmacia
         '
         'LoginFarmacia
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(614, 405)
+        Me.ClientSize = New System.Drawing.Size(819, 498)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.txtcontraseña)
@@ -251,6 +248,7 @@ Partial Class LoginFarmacia
         Me.Controls.Add(Me.Label6)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "LoginFarmacia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

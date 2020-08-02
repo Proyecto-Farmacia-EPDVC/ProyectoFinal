@@ -65,7 +65,6 @@ Public Class frmProveedor
         P_ciudad = txtciudad.Text
         P_Tel = txttelefono.Text
 
-
         Try
             If conexion.insertarProveedor(P_descripProv, P_ciudad, P_Tel) Then
 
@@ -139,18 +138,9 @@ Public Class frmProveedor
         mostrar()
     End Sub
 
-
     Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
         buscar()
     End Sub
-
-
-
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
-
-
 
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
         Dim FilaActual As Integer
