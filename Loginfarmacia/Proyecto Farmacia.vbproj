@@ -279,7 +279,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Base de Datos\Scrip Base de Datos.txt" />
+    <Content Include="Base de Datos\Script Base de Datos.txt" />
     <Content Include="Icono.ico" />
     <Content Include="Imagen\btneditar.png" />
     <Content Include="Imagen\btnguarddar.png" />
