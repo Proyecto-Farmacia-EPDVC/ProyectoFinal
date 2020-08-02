@@ -31,8 +31,12 @@ Partial Class MostrarProductos
         Me.Eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtflag = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.imagen = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.imagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -43,7 +47,7 @@ Partial Class MostrarProductos
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Window
         Me.GroupBox2.Location = New System.Drawing.Point(12, 21)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1250, 388)
+        Me.GroupBox2.Size = New System.Drawing.Size(981, 388)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "LISTA DE PRODUCTOS"
@@ -51,7 +55,7 @@ Partial Class MostrarProductos
         'inexistente
         '
         Me.inexistente.AutoSize = True
-        Me.inexistente.Location = New System.Drawing.Point(502, 208)
+        Me.inexistente.Location = New System.Drawing.Point(399, 175)
         Me.inexistente.Name = "inexistente"
         Me.inexistente.Size = New System.Drawing.Size(226, 29)
         Me.inexistente.TabIndex = 20
@@ -87,13 +91,13 @@ Partial Class MostrarProductos
         Me.datalistado.DefaultCellStyle = DataGridViewCellStyle2
         Me.datalistado.EnableHeadersVisualStyles = False
         Me.datalistado.GridColor = System.Drawing.SystemColors.Highlight
-        Me.datalistado.Location = New System.Drawing.Point(51, 63)
+        Me.datalistado.Location = New System.Drawing.Point(22, 54)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
         Me.datalistado.RowHeadersVisible = False
         Me.datalistado.RowTemplate.Height = 28
         Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(1155, 296)
+        Me.datalistado.Size = New System.Drawing.Size(933, 296)
         Me.datalistado.TabIndex = 19
         '
         'Eliminar
@@ -128,12 +132,38 @@ Partial Class MostrarProductos
         Me.txtflag.Text = "0"
         Me.txtflag.Visible = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.imagen)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Window
+        Me.GroupBox1.Location = New System.Drawing.Point(1034, 105)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(231, 241)
+        Me.GroupBox1.TabIndex = 38
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "IMAGEN "
+        '
+        'imagen
+        '
+        Me.imagen.BackgroundImage = CType(resources.GetObject("imagen.BackgroundImage"), System.Drawing.Image)
+        Me.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imagen.InitialImage = Global.Loginfarmacia.My.Resources.Resources.transparente
+        Me.imagen.Location = New System.Drawing.Point(37, 46)
+        Me.imagen.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.imagen.Name = "imagen"
+        Me.imagen.Size = New System.Drawing.Size(158, 154)
+        Me.imagen.TabIndex = 24
+        Me.imagen.TabStop = False
+        '
         'MostrarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1285, 512)
+        Me.ClientSize = New System.Drawing.Size(1294, 503)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtflag)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
@@ -144,6 +174,8 @@ Partial Class MostrarProductos
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.imagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,4 +187,6 @@ Partial Class MostrarProductos
     Friend WithEvents Eliminar As DataGridViewCheckBoxColumn
     Friend WithEvents Button1 As Button
     Friend WithEvents txtflag As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents imagen As PictureBox
 End Class

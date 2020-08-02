@@ -11,6 +11,17 @@ Public Class FarmaciaGerente
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Normal
         Me.Size = New System.Drawing.Size(1275, 630)
+
+        If txtflag.Text = "2" Then
+            btnempleados.Visible = False
+            lempleado.Visible = False
+            btnReportes.Visible = False
+            lreporte.Visible = False
+            btnproveedor.Visible = False
+            lproveedor.Visible = False
+            btncompras.Visible = False
+            lcompras.Visible = False
+        End If
         abrirFormulario(frmhora)
 
     End Sub
@@ -54,7 +65,10 @@ Public Class FarmaciaGerente
         Dim opcion As DialogResult
         opcion = MessageBox.Show("¿Esta Seguro que quiere salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If opcion = DialogResult.Yes Then
+            txtflag.Text = ""
             Me.Close()
+            LoginFarmacia.Show()
+
         End If
     End Sub
 
@@ -112,7 +126,23 @@ Public Class FarmaciaGerente
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LoginFarmacia.ShowDialog()
-        frmhora.Close()
+        Dim result As DialogResult
+        result = MessageBox.Show("¿Esta Seguro que desea cerrar sesion?", "Despedir Empleado", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+            txtflag.Text = ""
+            Me.Close()
+            LoginFarmacia.Show()
+        End If
     End Sub
+
+    Private Sub panel1_Paint(sender As Object, e As PaintEventArgs) Handles panel1.Paint
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+
 End Class

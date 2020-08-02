@@ -24,8 +24,8 @@ Partial Class FrmCliente
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCliente))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
@@ -139,10 +139,10 @@ Partial Class FrmCliente
         '
         'txtdni
         '
-        Me.txtdni.Location = New System.Drawing.Point(773, 299)
+        Me.txtdni.Location = New System.Drawing.Point(775, 299)
         Me.txtdni.MaxLength = 13
         Me.txtdni.Name = "txtdni"
-        Me.txtdni.Size = New System.Drawing.Size(400, 35)
+        Me.txtdni.Size = New System.Drawing.Size(364, 35)
         Me.txtdni.TabIndex = 10
         '
         'Label5
@@ -157,9 +157,9 @@ Partial Class FrmCliente
         'txttelefono
         '
         Me.txttelefono.Location = New System.Drawing.Point(773, 187)
-        Me.txttelefono.MaxLength = 9
+        Me.txttelefono.MaxLength = 8
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(400, 35)
+        Me.txttelefono.Size = New System.Drawing.Size(366, 35)
         Me.txttelefono.TabIndex = 8
         '
         'Label4
@@ -173,15 +173,16 @@ Partial Class FrmCliente
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(773, 65)
+        Me.txtdireccion.Location = New System.Drawing.Point(773, 57)
+        Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(400, 35)
+        Me.txtdireccion.Size = New System.Drawing.Size(366, 99)
         Me.txtdireccion.TabIndex = 6
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 305)
+        Me.Label3.Location = New System.Drawing.Point(17, 305)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(153, 29)
         Me.Label3.TabIndex = 5
@@ -197,11 +198,11 @@ Partial Class FrmCliente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(146, 45)
+        Me.Label7.Location = New System.Drawing.Point(138, 44)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(335, 29)
+        Me.Label7.Size = New System.Drawing.Size(360, 29)
         Me.Label7.TabIndex = 18
-        Me.Label7.Text = "BUSQUEDA POR NOMBRE"
+        Me.Label7.Text = "BUSQUEDA POR IDENTIDAD" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'txtbuscar
         '
@@ -218,26 +219,26 @@ Partial Class FrmCliente
         Me.datalistado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.datalistado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.datalistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.datalistado.ColumnHeadersHeight = 38
         Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.datalistado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar})
         Me.datalistado.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datalistado.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datalistado.DefaultCellStyle = DataGridViewCellStyle2
         Me.datalistado.EnableHeadersVisualStyles = False
         Me.datalistado.GridColor = System.Drawing.SystemColors.Highlight
         Me.datalistado.Location = New System.Drawing.Point(151, 96)
@@ -251,15 +252,15 @@ Partial Class FrmCliente
         '
         'txtapellidos
         '
-        Me.txtapellidos.Location = New System.Drawing.Point(188, 299)
+        Me.txtapellidos.Location = New System.Drawing.Point(177, 299)
         Me.txtapellidos.Name = "txtapellidos"
-        Me.txtapellidos.Size = New System.Drawing.Size(400, 35)
+        Me.txtapellidos.Size = New System.Drawing.Size(377, 35)
         Me.txtapellidos.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 190)
+        Me.Label2.Location = New System.Drawing.Point(37, 190)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 29)
         Me.Label2.TabIndex = 3
@@ -267,9 +268,9 @@ Partial Class FrmCliente
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(188, 187)
+        Me.txtnombre.Location = New System.Drawing.Point(177, 187)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(400, 35)
+        Me.txtnombre.Size = New System.Drawing.Size(377, 35)
         Me.txtnombre.TabIndex = 2
         '
         'Label1
@@ -283,10 +284,10 @@ Partial Class FrmCliente
         '
         'txtidcliente
         '
-        Me.txtidcliente.Location = New System.Drawing.Point(188, 60)
+        Me.txtidcliente.Location = New System.Drawing.Point(177, 60)
         Me.txtidcliente.Name = "txtidcliente"
         Me.txtidcliente.ReadOnly = True
-        Me.txtidcliente.Size = New System.Drawing.Size(400, 35)
+        Me.txtidcliente.Size = New System.Drawing.Size(377, 35)
         Me.txtidcliente.TabIndex = 0
         '
         'GroupBox2

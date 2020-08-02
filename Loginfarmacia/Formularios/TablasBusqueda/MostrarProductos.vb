@@ -36,11 +36,9 @@ Public Class MostrarProductos
     Private Sub ocultar_columnas()
         datalistado.Columns(1).Visible = False
         datalistado.Columns(2).Visible = False
+        datalistado.Columns(10).Visible = False
     End Sub
 
-    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-
-    End Sub
 
     Private Sub datalistado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellDoubleClick
         If txtflag.Text = "1" Then
@@ -56,6 +54,20 @@ Public Class MostrarProductos
             frmCompra.txtprecio_compra.Text = datalistado.SelectedCells.Item(7).Value
             Me.Close()
         End If
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
+        Dim FilaActual As Integer
+        FilaActual = datalistado.CurrentRow.Index
+        imagen.BackgroundImage = Nothing
+        Dim b() As Byte = datalistado.Rows(FilaActual).Cells(10).Value
+        Dim ms As New IO.MemoryStream(b)
+        imagen.Image = Image.FromStream(ms)
+        imagen.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
 
 End Class

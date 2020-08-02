@@ -116,4 +116,56 @@ Public Class frmDetalles_venta
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
+
+    Private Sub txtnum_documento_TextChanged(sender As Object, e As EventArgs) Handles txtnum_documento.TextChanged
+
+    End Sub
+
+    Private Sub txtnum_documento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnum_documento.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtprecio_unitario_TextChanged(sender As Object, e As EventArgs) Handles txtprecio_unitario.TextChanged
+
+    End Sub
+
+    Private Sub txtprecio_unitario_KeyUp(sender As Object, e As KeyEventArgs) Handles txtprecio_unitario.KeyUp
+
+    End Sub
+
+    Private Sub txtprecio_unitario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprecio_unitario.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtnum_documento_Validating(sender As Object, e As CancelEventArgs) Handles txtnum_documento.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtprecio_unitario_Validating(sender As Object, e As CancelEventArgs) Handles txtprecio_unitario.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

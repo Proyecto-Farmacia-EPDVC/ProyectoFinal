@@ -46,7 +46,7 @@ Public Class FrmCliente
     End Sub
     Private Sub buscar()
         Try
-            dt = conexion.busqueda(" cliente ", " CONCAT(nombre,' ',apellidos) like '%" + txtbuscar.Text + "%'")
+            dt = conexion.busqueda(" cliente ", " dni like '%" + txtbuscar.Text + "%'")
 
             If dt.Rows.Count <> 0 Then
                 datalistado.DataSource = dt
@@ -185,4 +185,99 @@ Public Class FrmCliente
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
+    Private Sub txttelefono_TextChanged(sender As Object, e As EventArgs) Handles txttelefono.TextChanged
+
+    End Sub
+
+    Private Sub txttelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txttelefono.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtdni_TextChanged(sender As Object, e As EventArgs) Handles txtdni.TextChanged
+
+    End Sub
+
+    Private Sub txtdni_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtdni.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
+
+    End Sub
+
+    Private Sub txtnombre_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtapellidos_TextChanged(sender As Object, e As EventArgs) Handles txtapellidos.TextChanged
+
+    End Sub
+
+    Private Sub txtapellidos_Validating(sender As Object, e As CancelEventArgs) Handles txtapellidos.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtdireccion_TextChanged(sender As Object, e As EventArgs) Handles txtdireccion.TextChanged
+
+    End Sub
+
+    Private Sub txtdireccion_Validating(sender As Object, e As CancelEventArgs) Handles txtdireccion.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txttelefono_Validating(sender As Object, e As CancelEventArgs) Handles txttelefono.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtdni_Validating(sender As Object, e As CancelEventArgs) Handles txtdni.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

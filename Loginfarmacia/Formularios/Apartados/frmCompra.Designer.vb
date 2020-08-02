@@ -147,6 +147,7 @@ Partial Class frmCompra
         Me.txtprecio_compra.Location = New System.Drawing.Point(210, 528)
         Me.txtprecio_compra.MaxLength = 9
         Me.txtprecio_compra.Name = "txtprecio_compra"
+        Me.txtprecio_compra.ReadOnly = True
         Me.txtprecio_compra.Size = New System.Drawing.Size(122, 28)
         Me.txtprecio_compra.TabIndex = 28
         '
@@ -208,11 +209,12 @@ Partial Class frmCompra
         '
         Me.txtfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.txtfechaCompra.Location = New System.Drawing.Point(212, 271)
+        Me.txtfechaCompra.MaxDate = New Date(2020, 8, 1, 0, 0, 0, 0)
         Me.txtfechaCompra.Name = "txtfechaCompra"
         Me.txtfechaCompra.Size = New System.Drawing.Size(284, 35)
         Me.txtfechaCompra.TabIndex = 19
         Me.txtfechaCompra.TabStop = False
-        Me.txtfechaCompra.Value = New Date(2020, 8, 1, 1, 59, 45, 0)
+        Me.txtfechaCompra.Value = New Date(2020, 8, 1, 0, 0, 0, 0)
         '
         'txtnombre_proveedor
         '

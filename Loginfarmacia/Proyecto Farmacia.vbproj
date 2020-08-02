@@ -48,6 +48,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,16 +77,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\Farmaseutico\frmCategoria.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmCategoria.Designer.vb">
       <DependentUpon>frmCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmCategoria.vb">
+    <Compile Include="Formularios\Apartados\frmCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmEmpleado.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmEmpleado.Designer.vb">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmEmpleado.vb">
+    <Compile Include="Formularios\Apartados\frmEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\TablasBusqueda\MostrarCategoria.Designer.vb">
@@ -122,41 +125,41 @@
     <Compile Include="Login y principales\frmhora.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmProductos.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmProductos.Designer.vb">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmProductos.vb">
+    <Compile Include="Formularios\Apartados\frmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\FrmCliente.Designer.vb">
+    <Compile Include="Formularios\Apartados\FrmCliente.Designer.vb">
       <DependentUpon>FrmCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\FrmCliente.vb">
+    <Compile Include="Formularios\Apartados\FrmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conexion\Conexion.vb" />
-    <Compile Include="Formularios\Farmaseutico\frmDetalles_venta.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmDetalles_venta.Designer.vb">
       <DependentUpon>frmDetalles_venta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmDetalles_venta.vb">
+    <Compile Include="Formularios\Apartados\frmDetalles_venta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmCompra.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmCompra.Designer.vb">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmCompra.vb">
+    <Compile Include="Formularios\Apartados\frmCompra.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmVenta.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmVenta.Designer.vb">
       <DependentUpon>frmVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmVenta.vb">
+    <Compile Include="Formularios\Apartados\frmVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmProveedor.Designer.vb">
+    <Compile Include="Formularios\Apartados\frmProveedor.Designer.vb">
       <DependentUpon>frmProveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Farmaseutico\frmProveedor.vb">
+    <Compile Include="Formularios\Apartados\frmProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login y principales\FarmaciaEmpleados.Designer.vb">
@@ -202,13 +205,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmCategoria.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmCategoria.resx">
       <DependentUpon>frmCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmCompra.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmCompra.resx">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmEmpleado.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TablasBusqueda\MostrarCategoria.resx">
@@ -229,19 +232,19 @@
     <EmbeddedResource Include="Login y principales\frmhora.resx">
       <DependentUpon>frmhora.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmProductos.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\FrmCliente.resx">
+    <EmbeddedResource Include="Formularios\Apartados\FrmCliente.resx">
       <DependentUpon>FrmCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmDetalles_venta.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmDetalles_venta.resx">
       <DependentUpon>frmDetalles_venta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmProveedor.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmProveedor.resx">
       <DependentUpon>frmProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Farmaseutico\frmVenta.resx">
+    <EmbeddedResource Include="Formularios\Apartados\frmVenta.resx">
       <DependentUpon>frmVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login y principales\FarmaciaEmpleados.resx">
@@ -277,6 +280,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base de Datos\Scrip Base de Datos.txt" />
+    <Content Include="Icono.ico" />
     <Content Include="Imagen\btneditar.png" />
     <Content Include="Imagen\btnguarddar.png" />
     <Content Include="Imagen\btnimprimir.png" />
@@ -284,8 +288,6 @@
     <Content Include="Imagen\btnnuevo.png" />
     <None Include="Imagen\transparente.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Empleados\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -39,6 +39,8 @@ Public Class frmVenta
         txtnombre_cliente.Text = ""
         txtnum_documento.Text = ""
         txtidventa.Text = ""
+        txtidempleado.Text = ""
+        txtnomempleado.Text = ""
     End Sub
 
     Private Sub buscar()
@@ -162,29 +164,6 @@ Public Class frmVenta
         mostrar_ventas()
     End Sub
 
-    Private Sub txtidcliente_Validating(sender As Object, e As CancelEventArgs) Handles txtidcliente.Validating
-        Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-                Me.ErrorValidacion.SetError(sender, "")
-            Else
-                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub txtnombre_cliente_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre_cliente.Validating
-        Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-                Me.ErrorValidacion.SetError(sender, "")
-            Else
-                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
 
     Private Sub txtnum_documento_Validating(sender As Object, e As CancelEventArgs) Handles txtnum_documento.Validating
         Try
@@ -226,4 +205,45 @@ Public Class frmVenta
     Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
         buscar()
     End Sub
+
+    Private Sub txtnum_documento_TextChanged(sender As Object, e As EventArgs) Handles txtnum_documento.TextChanged
+
+    End Sub
+
+    Private Sub txtnum_documento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnum_documento.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtidempleado_TextChanged(sender As Object, e As EventArgs) Handles txtidempleado.TextChanged
+
+    End Sub
+
+    Private Sub txtidempleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtidempleado.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub CMBtipo_documento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CMBtipo_documento.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub CMBtipo_documento_Validating(sender As Object, e As CancelEventArgs) Handles CMBtipo_documento.Validating
+        Try
+            If DirectCast(sender, ComboBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
 End Class

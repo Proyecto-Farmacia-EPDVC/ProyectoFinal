@@ -24,16 +24,19 @@ Partial Class FarmaciaGerente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FarmaciaGerente))
         Me.BarraTitulo = New System.Windows.Forms.Panel()
+        Me.txtflag = New System.Windows.Forms.TextBox()
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
-        Me.panel6 = New System.Windows.Forms.Panel()
-        Me.panel5 = New System.Windows.Forms.Panel()
+        Me.lempleado = New System.Windows.Forms.Panel()
+        Me.lcompras = New System.Windows.Forms.Panel()
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.MenuVertical = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lproveedor = New System.Windows.Forms.Panel()
         Me.btnproveedor = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lreporte = New System.Windows.Forms.Panel()
         Me.btnproductos = New System.Windows.Forms.Button()
         Me.btncategoria = New System.Windows.Forms.Button()
         Me.btnempleados = New System.Windows.Forms.Button()
@@ -45,8 +48,6 @@ Partial Class FarmaciaGerente
         Me.panel4 = New System.Windows.Forms.Panel()
         Me.panel7 = New System.Windows.Forms.Panel()
         Me.PanelForms = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.BarraTitulo.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +58,7 @@ Partial Class FarmaciaGerente
         'BarraTitulo
         '
         Me.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.BarraTitulo.Controls.Add(Me.txtflag)
         Me.BarraTitulo.Controls.Add(Me.btnMinimizar)
         Me.BarraTitulo.Controls.Add(Me.btnCerrar)
         Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
@@ -65,6 +67,15 @@ Partial Class FarmaciaGerente
         Me.BarraTitulo.Name = "BarraTitulo"
         Me.BarraTitulo.Size = New System.Drawing.Size(1946, 58)
         Me.BarraTitulo.TabIndex = 6
+        '
+        'txtflag
+        '
+        Me.txtflag.Location = New System.Drawing.Point(1796, 32)
+        Me.txtflag.Name = "txtflag"
+        Me.txtflag.Size = New System.Drawing.Size(22, 26)
+        Me.txtflag.TabIndex = 31
+        Me.txtflag.Text = "0"
+        Me.txtflag.Visible = False
         '
         'btnMinimizar
         '
@@ -92,23 +103,23 @@ Partial Class FarmaciaGerente
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.TabStop = False
         '
-        'panel6
+        'lempleado
         '
-        Me.panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.panel6.Location = New System.Drawing.Point(-2, 569)
-        Me.panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.panel6.Name = "panel6"
-        Me.panel6.Size = New System.Drawing.Size(10, 76)
-        Me.panel6.TabIndex = 12
+        Me.lempleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lempleado.Location = New System.Drawing.Point(-2, 569)
+        Me.lempleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lempleado.Name = "lempleado"
+        Me.lempleado.Size = New System.Drawing.Size(10, 76)
+        Me.lempleado.TabIndex = 12
         '
-        'panel5
+        'lcompras
         '
-        Me.panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.panel5.Location = New System.Drawing.Point(-2, 811)
-        Me.panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.panel5.Name = "panel5"
-        Me.panel5.Size = New System.Drawing.Size(10, 91)
-        Me.panel5.TabIndex = 10
+        Me.lcompras.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lcompras.Location = New System.Drawing.Point(-2, 811)
+        Me.lcompras.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lcompras.Name = "lcompras"
+        Me.lcompras.Size = New System.Drawing.Size(10, 91)
+        Me.lcompras.TabIndex = 10
         '
         'btnReportes
         '
@@ -134,17 +145,17 @@ Partial Class FarmaciaGerente
         Me.MenuVertical.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MenuVertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.MenuVertical.Controls.Add(Me.PictureBox1)
         Me.MenuVertical.Controls.Add(Me.Panel9)
         Me.MenuVertical.Controls.Add(Me.Button1)
-        Me.MenuVertical.Controls.Add(Me.PictureBox1)
-        Me.MenuVertical.Controls.Add(Me.Panel8)
+        Me.MenuVertical.Controls.Add(Me.lproveedor)
         Me.MenuVertical.Controls.Add(Me.btnproveedor)
-        Me.MenuVertical.Controls.Add(Me.Panel3)
+        Me.MenuVertical.Controls.Add(Me.lreporte)
         Me.MenuVertical.Controls.Add(Me.btnproductos)
         Me.MenuVertical.Controls.Add(Me.btnReportes)
-        Me.MenuVertical.Controls.Add(Me.panel6)
+        Me.MenuVertical.Controls.Add(Me.lempleado)
         Me.MenuVertical.Controls.Add(Me.btncategoria)
-        Me.MenuVertical.Controls.Add(Me.panel5)
+        Me.MenuVertical.Controls.Add(Me.lcompras)
         Me.MenuVertical.Controls.Add(Me.btnempleados)
         Me.MenuVertical.Controls.Add(Me.btncompras)
         Me.MenuVertical.Controls.Add(Me.btnclientes)
@@ -163,21 +174,49 @@ Partial Class FarmaciaGerente
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(67, 61)
+        Me.PictureBox1.Location = New System.Drawing.Point(72, 63)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(201, 165)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Panel8
+        'Panel9
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(1, 735)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(8, 69)
-        Me.Panel8.TabIndex = 11
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel9.Location = New System.Drawing.Point(-2, 905)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(10, 48)
+        Me.Panel9.TabIndex = 11
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(12, 905)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(317, 44)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Cerrar Sesion"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'lproveedor
+        '
+        Me.lproveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lproveedor.Location = New System.Drawing.Point(1, 735)
+        Me.lproveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lproveedor.Name = "lproveedor"
+        Me.lproveedor.Size = New System.Drawing.Size(8, 69)
+        Me.lproveedor.TabIndex = 11
         '
         'btnproveedor
         '
@@ -198,14 +237,14 @@ Partial Class FarmaciaGerente
         Me.btnproveedor.Text = "Proveedor"
         Me.btnproveedor.UseVisualStyleBackColor = False
         '
-        'Panel3
+        'lreporte
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(-2, 652)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(10, 77)
-        Me.Panel3.TabIndex = 13
+        Me.lreporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lreporte.Location = New System.Drawing.Point(-2, 652)
+        Me.lreporte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lreporte.Name = "lreporte"
+        Me.lreporte.Size = New System.Drawing.Size(10, 77)
+        Me.lreporte.TabIndex = 13
         '
         'btnproductos
         '
@@ -327,7 +366,7 @@ Partial Class FarmaciaGerente
         Me.btnventas.Name = "btnventas"
         Me.btnventas.Size = New System.Drawing.Size(326, 85)
         Me.btnventas.TabIndex = 3
-        Me.btnventas.Text = "Ventas"
+        Me.btnventas.Text = "     Ventas y Auto Servicio"
         Me.btnventas.UseVisualStyleBackColor = False
         '
         'panel1
@@ -367,34 +406,6 @@ Partial Class FarmaciaGerente
         Me.PanelForms.Size = New System.Drawing.Size(1946, 942)
         Me.PanelForms.TabIndex = 8
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.DarkRed
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(12, 905)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(317, 44)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Cerrar Sesion"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel9.Location = New System.Drawing.Point(-2, 905)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(10, 48)
-        Me.Panel9.TabIndex = 11
-        '
         'FarmaciaGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -409,6 +420,7 @@ Partial Class FarmaciaGerente
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FarmaciaGerente"
         Me.BarraTitulo.ResumeLayout(False)
+        Me.BarraTitulo.PerformLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuVertical.ResumeLayout(False)
@@ -420,8 +432,8 @@ Partial Class FarmaciaGerente
     Private WithEvents BarraTitulo As Panel
     Private WithEvents btnMinimizar As PictureBox
     Private WithEvents btnCerrar As PictureBox
-    Private WithEvents panel6 As Panel
-    Private WithEvents panel5 As Panel
+    Private WithEvents lempleado As Panel
+    Private WithEvents lcompras As Panel
     Private WithEvents btnReportes As Button
     Private WithEvents MenuVertical As Panel
     Private WithEvents panel7 As Panel
@@ -434,11 +446,12 @@ Partial Class FarmaciaGerente
     Private WithEvents btnventas As Button
     Private WithEvents panel1 As Panel
     Private WithEvents btnproductos As Button
-    Private WithEvents Panel8 As Panel
+    Private WithEvents lproveedor As Panel
     Private WithEvents btnproveedor As Button
-    Private WithEvents Panel3 As Panel
+    Private WithEvents lreporte As Panel
     Private WithEvents PanelForms As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Private WithEvents Panel9 As Panel
     Private WithEvents Button1 As Button
+    Friend WithEvents txtflag As TextBox
 End Class

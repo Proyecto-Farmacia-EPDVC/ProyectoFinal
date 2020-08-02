@@ -31,12 +31,12 @@ Public Class conexion
     End Sub
 
 
-    Public Function eliminarUsuario(idUsuario As Integer, rol As String)
+    Public Function eliminarUsuario(idEmpleado As String, rol As String)
         Try
             conexion.Open()
-            cmb = New SqlCommand("eliminarUsuario", conexion)
+            cmb = New SqlCommand("eliminar_Empleado", conexion)
             cmb.CommandType = CommandType.StoredProcedure
-            cmb.Parameters.AddWithValue("@idUsuario", idUsuario)
+            cmb.Parameters.AddWithValue("@idEmpleado", idEmpleado)
             cmb.Parameters.AddWithValue("@rol", rol)
             If cmb.ExecuteNonQuery <> 0 Then
                 Return True
@@ -598,6 +598,29 @@ Public Class conexion
         End Try
     End Function
 
+    Public Function mostrarEmpleadosActivos() As DataTable
+        Try
+            conexion.Open()
+            cmb = New SqlCommand("Mostrar_EmpleadoActivo", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+
+            cmb.Connection = conexion
+
+            If cmb.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
 
     ' PROVEEDOR
 
@@ -736,6 +759,117 @@ Public Class conexion
             cmb.Connection = conexion
 
             If cmb.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    'BUSQUEDAS
+    Public Function buscarEmpleado(UserName As String) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarEmpleado", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@UserName", UserName)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function buscarCliente(dni As String) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarCliente", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@dni", dni)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function buscarCategoria(nombre_categoria As String) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarCategoria", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@nombre_categoria", nombre_categoria)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function buscarProducto(nombre As String) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarProducto", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@nombre", nombre)
+            If cmb.ExecuteNonQuery <> 0 Then
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmb)
+                da.Fill(dt)
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+        Finally
+            conexion.Close()
+        End Try
+    End Function
+
+    Public Function buscarProveedor(P_descripProv As String) As DataTable
+        Try
+            conexion.Open()
+            Dim cmb As New SqlCommand("buscarProveedor", conexion)
+            cmb.CommandType = CommandType.StoredProcedure
+            cmb.Parameters.AddWithValue("@P_descripProv", P_descripProv)
+            If cmb.ExecuteNonQuery <> 0 Then
                 Dim dt As New DataTable
                 Dim da As New SqlDataAdapter(cmb)
                 da.Fill(dt)

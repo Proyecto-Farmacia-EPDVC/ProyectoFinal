@@ -9,7 +9,7 @@ Public Class MostrarEmpleados
     Public Sub mostrar()
         Try
             Dim func As New conexion
-            dt = func.mostrarEmpleados
+            dt = func.mostrarEmpleadosActivos
             datalistado.Columns.Item("Eliminar").Visible = False
 
             If dt.Rows.Count <> 0 Then

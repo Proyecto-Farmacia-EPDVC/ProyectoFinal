@@ -22,9 +22,10 @@ Partial Class frmDetalles_venta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDetalles_venta))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnimprimir = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtstock = New System.Windows.Forms.NumericUpDown()
@@ -49,20 +50,22 @@ Partial Class frmDetalles_venta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidventa = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.inexistente = New System.Windows.Forms.LinkLabel()
+        Me.datalistado = New System.Windows.Forms.DataGridView()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
-        Me.datalistado = New System.Windows.Forms.DataGridView()
-        Me.inexistente = New System.Windows.Forms.LinkLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.txtstock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnimprimir
@@ -114,7 +117,7 @@ Partial Class frmDetalles_venta
         '
         'txtstock
         '
-        Me.txtstock.Location = New System.Drawing.Point(368, 494)
+        Me.txtstock.Location = New System.Drawing.Point(368, 489)
         Me.txtstock.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.txtstock.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtstock.Name = "txtstock"
@@ -239,7 +242,7 @@ Partial Class frmDetalles_venta
         '
         'txtnum_documento
         '
-        Me.txtnum_documento.Location = New System.Drawing.Point(154, 359)
+        Me.txtnum_documento.Location = New System.Drawing.Point(154, 362)
         Me.txtnum_documento.MaxLength = 9
         Me.txtnum_documento.Name = "txtnum_documento"
         Me.txtnum_documento.Size = New System.Drawing.Size(264, 35)
@@ -310,6 +313,53 @@ Partial Class frmDetalles_venta
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "lista articulos"
         '
+        'inexistente
+        '
+        Me.inexistente.AutoSize = True
+        Me.inexistente.Location = New System.Drawing.Point(208, 177)
+        Me.inexistente.Name = "inexistente"
+        Me.inexistente.Size = New System.Drawing.Size(226, 29)
+        Me.inexistente.TabIndex = 18
+        Me.inexistente.TabStop = True
+        Me.inexistente.Text = "Datos Inexistentes"
+        '
+        'datalistado
+        '
+        Me.datalistado.AllowUserToAddRows = False
+        Me.datalistado.AllowUserToDeleteRows = False
+        Me.datalistado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.datalistado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.datalistado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.datalistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.datalistado.ColumnHeadersHeight = 38
+        Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datalistado.DefaultCellStyle = DataGridViewCellStyle2
+        Me.datalistado.EnableHeadersVisualStyles = False
+        Me.datalistado.GridColor = System.Drawing.SystemColors.Highlight
+        Me.datalistado.Location = New System.Drawing.Point(6, 45)
+        Me.datalistado.Name = "datalistado"
+        Me.datalistado.ReadOnly = True
+        Me.datalistado.RowHeadersVisible = False
+        Me.datalistado.RowTemplate.Height = 28
+        Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.datalistado.Size = New System.Drawing.Size(572, 301)
+        Me.datalistado.TabIndex = 1
+        '
         'btnguardar
         '
         Me.btnguardar.BackColor = System.Drawing.Color.SteelBlue
@@ -339,53 +389,6 @@ Partial Class frmDetalles_venta
         Me.btnnuevo.Text = "Nuevo"
         Me.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnnuevo.UseVisualStyleBackColor = False
-        '
-        'datalistado
-        '
-        Me.datalistado.AllowUserToAddRows = False
-        Me.datalistado.AllowUserToDeleteRows = False
-        Me.datalistado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.datalistado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.datalistado.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.datalistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.datalistado.ColumnHeadersHeight = 38
-        Me.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datalistado.DefaultCellStyle = DataGridViewCellStyle4
-        Me.datalistado.EnableHeadersVisualStyles = False
-        Me.datalistado.GridColor = System.Drawing.SystemColors.Highlight
-        Me.datalistado.Location = New System.Drawing.Point(6, 45)
-        Me.datalistado.Name = "datalistado"
-        Me.datalistado.ReadOnly = True
-        Me.datalistado.RowHeadersVisible = False
-        Me.datalistado.RowTemplate.Height = 28
-        Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(572, 301)
-        Me.datalistado.TabIndex = 1
-        '
-        'inexistente
-        '
-        Me.inexistente.AutoSize = True
-        Me.inexistente.Location = New System.Drawing.Point(208, 177)
-        Me.inexistente.Name = "inexistente"
-        Me.inexistente.Size = New System.Drawing.Size(226, 29)
-        Me.inexistente.TabIndex = 18
-        Me.inexistente.TabStop = True
-        Me.inexistente.Text = "Datos Inexistentes"
         '
         'Panel1
         '
@@ -435,6 +438,10 @@ Partial Class frmDetalles_venta
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'frmDetalles_venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -463,6 +470,7 @@ Partial Class frmDetalles_venta
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -500,4 +508,5 @@ Partial Class frmDetalles_venta
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents ErrorValidacion As ErrorProvider
 End Class

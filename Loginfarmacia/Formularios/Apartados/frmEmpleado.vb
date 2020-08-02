@@ -8,6 +8,7 @@ Public Class frmEmpleado
 
     Private Sub frmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
+        btndespedir.Enabled = False
     End Sub
     Public Sub mostrar()
         Try
@@ -44,20 +45,13 @@ Public Class frmEmpleado
         txtcontra.Text = ""
         txtidempleado.Text = ""
     End Sub
+
     Private Sub buscar()
         Try
-            dt = conexion.busqueda("Empleados", "CONCAT(Nombres,' ',Apellidos) like '%" + txtbuscar.Text + "%'")
-            mostrar()
-            If dt.Rows.Count <> 0 Then
-                datalistado.DataSource = dt
-                conexion.conexion.Close()
-                ' ocultar_columnas()
-            Else
-                datalistado.DataSource = Nothing
-                conexion.conexion.Close()
-            End If
-
-
+            Dim UserName As String
+            UserName = txtbuscar.Text
+            dt = conexion.buscarEmpleado(UserName)
+            datalistado.DataSource = If(dt.Rows.Count <> 0, dt, Nothing)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -131,6 +125,25 @@ Public Class frmEmpleado
         End Try
     End Sub
 
+    Private Sub eliminarEmpleado()
+        Dim idEmpleado As String
+        Dim rol As String
+        idEmpleado = txtidempleado.Text
+        rol = "Auxiliar"
+        Try
+            If (conexion.eliminarUsuario(idEmpleado, rol)) Then
+                MsgBox("Empleado dado de baja")
+                'conexion.conexion.Close()
+            Else
+                MsgBox("Error al dar de baja al Empleado")
+                'conexion.conexion.Close()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         If Me.ValidateChildren = True And txtidempleado.Text <> "" And txtnombre.Text <> "" And txtapellidos.Text <> "" And txtfechaN.Text <> "" And txttelefono.Text <> "" And cmbSexo.Text <> "" And txtcontra.Text <> "" Then
             Try
@@ -149,6 +162,7 @@ Public Class frmEmpleado
     Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
         limpiar()
         mostrar()
+        btndespedir.Enabled = False
     End Sub
 
     Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
@@ -197,5 +211,110 @@ Public Class frmEmpleado
         cmbSexo.Text = datalistado.Rows(FilaActual).Cells(6).Value
         btnguardar.Visible = False
         btneditar.Visible = True
+        btndespedir.Enabled = True
+    End Sub
+
+    Private Sub btndespedir_Click(sender As Object, e As EventArgs) Handles btndespedir.Click
+        Dim result As DialogResult
+        result = MessageBox.Show("Realmente desea despedir a este Empleado?", "Despedir Empleado", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+
+            eliminarEmpleado()
+        Else
+            limpiar()
+        End If
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub txttelefono_TextChanged(sender As Object, e As EventArgs) Handles txttelefono.TextChanged
+
+    End Sub
+
+    Private Sub txttelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txttelefono.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
+
+    End Sub
+
+    Private Sub txtnombre_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtapellidos_TextChanged(sender As Object, e As EventArgs) Handles txtapellidos.TextChanged
+
+    End Sub
+
+    Private Sub txtapellidos_Validating(sender As Object, e As CancelEventArgs) Handles txtapellidos.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txttelefono_Validating(sender As Object, e As CancelEventArgs) Handles txttelefono.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmbSexo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSexo.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbSexo_Validating(sender As Object, e As CancelEventArgs) Handles cmbSexo.Validating
+        Try
+            If DirectCast(sender, ComboBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtcontra_TextChanged(sender As Object, e As EventArgs) Handles txtcontra.TextChanged
+
+    End Sub
+
+    Private Sub txtcontra_Validating(sender As Object, e As CancelEventArgs) Handles txtcontra.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

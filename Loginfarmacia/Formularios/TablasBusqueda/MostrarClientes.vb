@@ -39,7 +39,7 @@ Public Class MostrarClientes
     Private Sub buscar()
         Try
 
-            dt = conexion.busqueda(" cliente ", " CONCAT(nombre,' ',apellidos) like '%" + txtbuscar.Text + "%'")
+            dt = conexion.busqueda(" cliente ", " dni like '%" + txtbuscar.Text + "%'")
 
 
             If dt.Rows.Count <> 0 Then
@@ -78,5 +78,9 @@ Public Class MostrarClientes
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
+    End Sub
+
+    Private Sub txtbuscar_TextChanged(sender As Object, e As EventArgs) Handles txtbuscar.TextChanged
+        buscar()
     End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class frmProveedor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedor))
@@ -42,9 +43,11 @@ Partial Class frmProveedor
         Me.txtdescripProv = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidproveedor = New System.Windows.Forms.TextBox()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -192,7 +195,7 @@ Partial Class frmProveedor
         '
         Me.txttelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttelefono.Location = New System.Drawing.Point(168, 304)
-        Me.txttelefono.MaxLength = 9
+        Me.txttelefono.MaxLength = 8
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(264, 35)
         Me.txttelefono.TabIndex = 8
@@ -268,6 +271,10 @@ Partial Class frmProveedor
         Me.txtidproveedor.Size = New System.Drawing.Size(264, 35)
         Me.txtidproveedor.TabIndex = 0
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'frmProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -284,6 +291,7 @@ Partial Class frmProveedor
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -304,4 +312,5 @@ Partial Class frmProveedor
     Friend WithEvents txtidproveedor As TextBox
     Friend WithEvents datalistado As DataGridView
     Friend WithEvents inexistente As LinkLabel
+    Friend WithEvents ErrorValidacion As ErrorProvider
 End Class

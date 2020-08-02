@@ -42,17 +42,10 @@ Public Class frmProveedor
     End Sub
     Private Sub buscar()
         Try
-            dt = conexion.busqueda(" Proveedores ", " P_descripProv like '%" + txtbuscar.Text + "%'")
-
-            If dt.Rows.Count <> 0 Then
-
-                datalistado.DataSource = dt
-                conexion.conexion.Close()
-
-            Else
-                datalistado.DataSource = Nothing
-                conexion.conexion.Close()
-            End If
+            Dim P_descripProv As String
+            P_descripProv = txtbuscar.Text
+            dt = conexion.buscarProveedor(P_descripProv)
+            datalistado.DataSource = If(dt.Rows.Count <> 0, dt, Nothing)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -151,5 +144,61 @@ Public Class frmProveedor
         txttelefono.Text = datalistado.Rows(FilaActual).Cells(3).Value
         btnguardar.Visible = False
         btneditar.Visible = True
+    End Sub
+
+    Private Sub txttelefono_TextChanged(sender As Object, e As EventArgs) Handles txttelefono.TextChanged
+
+    End Sub
+
+    Private Sub txttelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txttelefono.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtdescripProv_TextChanged(sender As Object, e As EventArgs) Handles txtdescripProv.TextChanged
+
+    End Sub
+
+    Private Sub txtdescripProv_Validating(sender As Object, e As CancelEventArgs) Handles txtdescripProv.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtciudad_TextChanged(sender As Object, e As EventArgs) Handles txtciudad.TextChanged
+
+    End Sub
+
+    Private Sub txtciudad_Validating(sender As Object, e As CancelEventArgs) Handles txtciudad.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txttelefono_Validating(sender As Object, e As CancelEventArgs) Handles txttelefono.Validating
+        Try
+            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+                Me.ErrorValidacion.SetError(sender, "")
+            Else
+                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

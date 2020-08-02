@@ -31,7 +31,7 @@ Partial Class frmEmpleado
         Me.txtfechaN = New System.Windows.Forms.DateTimePicker()
         Me.cmbSexo = New System.Windows.Forms.ComboBox()
         Me.btnguardar = New System.Windows.Forms.Button()
-        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.btndespedir = New System.Windows.Forms.Button()
         Me.btneditar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
         Me.txtflag = New System.Windows.Forms.TextBox()
@@ -71,19 +71,21 @@ Partial Class frmEmpleado
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(162, 310)
+        Me.Label8.Location = New System.Drawing.Point(155, 310)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(111, 29)
+        Me.Label8.Size = New System.Drawing.Size(124, 29)
         Me.Label8.TabIndex = 21
-        Me.Label8.Text = "Fecha N"
+        Me.Label8.Text = "FECHA N"
         '
         'txtfechaN
         '
         Me.txtfechaN.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.txtfechaN.Location = New System.Drawing.Point(301, 304)
+        Me.txtfechaN.MaxDate = New Date(2000, 12, 31, 0, 0, 0, 0)
         Me.txtfechaN.Name = "txtfechaN"
         Me.txtfechaN.Size = New System.Drawing.Size(349, 35)
         Me.txtfechaN.TabIndex = 20
+        Me.txtfechaN.Value = New Date(2000, 12, 31, 0, 0, 0, 0)
         '
         'cmbSexo
         '
@@ -91,7 +93,7 @@ Partial Class frmEmpleado
         Me.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSexo.FormattingEnabled = True
         Me.cmbSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.cmbSexo.Location = New System.Drawing.Point(946, 166)
+        Me.cmbSexo.Location = New System.Drawing.Point(937, 166)
         Me.cmbSexo.Name = "cmbSexo"
         Me.cmbSexo.Size = New System.Drawing.Size(94, 37)
         Me.cmbSexo.TabIndex = 21
@@ -109,18 +111,18 @@ Partial Class frmEmpleado
         Me.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnguardar.UseVisualStyleBackColor = False
         '
-        'btneliminar
+        'btndespedir
         '
-        Me.btneliminar.BackColor = System.Drawing.Color.SteelBlue
-        Me.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btneliminar.Image = CType(resources.GetObject("btneliminar.Image"), System.Drawing.Image)
-        Me.btneliminar.Location = New System.Drawing.Point(1329, 278)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(178, 120)
-        Me.btneliminar.TabIndex = 15
-        Me.btneliminar.Text = "ELIMINAR"
-        Me.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btneliminar.UseVisualStyleBackColor = False
+        Me.btndespedir.BackColor = System.Drawing.Color.SteelBlue
+        Me.btndespedir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btndespedir.Image = CType(resources.GetObject("btndespedir.Image"), System.Drawing.Image)
+        Me.btndespedir.Location = New System.Drawing.Point(1329, 278)
+        Me.btndespedir.Name = "btndespedir"
+        Me.btndespedir.Size = New System.Drawing.Size(178, 120)
+        Me.btndespedir.TabIndex = 15
+        Me.btndespedir.Text = "DESPEDIR"
+        Me.btndespedir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btndespedir.UseVisualStyleBackColor = False
         '
         'btneditar
         '
@@ -255,7 +257,7 @@ Partial Class frmEmpleado
         'txtcontra
         '
         Me.txtcontra.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtcontra.Location = New System.Drawing.Point(946, 245)
+        Me.txtcontra.Location = New System.Drawing.Point(937, 245)
         Me.txtcontra.MaxLength = 8
         Me.txtcontra.Name = "txtcontra"
         Me.txtcontra.Size = New System.Drawing.Size(349, 28)
@@ -277,8 +279,8 @@ Partial Class frmEmpleado
         'txttelefono
         '
         Me.txttelefono.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txttelefono.Location = New System.Drawing.Point(946, 110)
-        Me.txttelefono.MaxLength = 9
+        Me.txttelefono.Location = New System.Drawing.Point(937, 110)
+        Me.txttelefono.MaxLength = 8
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(349, 28)
         Me.txttelefono.TabIndex = 8
@@ -337,7 +339,7 @@ Partial Class frmEmpleado
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btneliminar)
+        Me.GroupBox1.Controls.Add(Me.btndespedir)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.btnguardar)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -395,7 +397,7 @@ Partial Class frmEmpleado
     Friend WithEvents txtfechaN As DateTimePicker
     Friend WithEvents cmbSexo As ComboBox
     Friend WithEvents btnguardar As Button
-    Friend WithEvents btneliminar As Button
+    Friend WithEvents btndespedir As Button
     Friend WithEvents btneditar As Button
     Friend WithEvents btnnuevo As Button
     Friend WithEvents txtflag As TextBox

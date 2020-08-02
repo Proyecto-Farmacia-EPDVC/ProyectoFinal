@@ -6,6 +6,7 @@ Public Class frmProductos
 
     Private Sub frmProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrarProducto()
+        btnguardar.Enabled = False
         txtstock.Text = "0"
         txtprecio_compra.Text = "0"
         txtprecio_venta.Text = "0"
@@ -56,20 +57,15 @@ Public Class frmProductos
 
     Private Sub buscar()
         Try
-            dt = conexion.busqueda(" producto", " nombre like '%" + txtbuscar.Text + "%'")
-
-            If dt.Rows.Count <> 0 Then
-                datalistado.DataSource = dt
-                conexion.conexion.Close()
-                ocultar_columnas()
-            Else
-                datalistado.DataSource = Nothing
-                conexion.conexion.Close()
-            End If
+            Dim nombre As String
+            nombre = txtbuscar.Text
+            dt = conexion.buscarProducto(nombre)
+            datalistado.DataSource = If(dt.Rows.Count <> 0, dt, Nothing)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
+
 
     Private Sub ocultar_columnas()
         datalistado.Columns(1).Visible = False
@@ -98,7 +94,6 @@ Public Class frmProductos
         Dim ms As New IO.MemoryStream()
         If Not imagen.Image Is Nothing Then
             imagen.Image.Save(ms, imagen.Image.RawFormat)
-            imagen.Image = My.Resources.transparente
         Else
             imagen.Image.Save(ms, imagen.Image.RawFormat)
         End If
@@ -154,24 +149,30 @@ Public Class frmProductos
     End Sub
 
     Private Sub btncargar_Click(sender As Object, e As EventArgs) Handles btncargar.Click
+
         If DLG.ShowDialog = DialogResult.OK Then
             imagen.BackgroundImage = Nothing
             imagen.Image = New Bitmap(DLG.FileName)
             imagen.SizeMode = PictureBoxSizeMode.StretchImage
+            btnguardar.Enabled = True
         End If
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles eliminarImg.Click
         imagen.Image = My.Resources.transparente
+        btnguardar.Enabled = False
     End Sub
 
     Private Sub btnnuevo_Click(sender As Object, e As EventArgs) Handles btnnuevo.Click
         limpiar()
         mostrarProducto()
+        eliminarImg.Visible = True
+        btnguardar.Enabled = False
     End Sub
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         If Me.ValidateChildren = True And txtnombre.Text <> "" And txtdescripcion.Text <> "" And txtstock.Text <> "" And txtprecio_compra.Text <> "" And txtprecio_venta.Text <> "" Then
+
             Try
                 insertarProducto()
                 mostrarProducto()
@@ -182,6 +183,7 @@ Public Class frmProductos
             End Try
         Else
             MessageBox.Show("Revise los datos Ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End If
     End Sub
 
@@ -217,18 +219,6 @@ Public Class frmProductos
         buscar()
     End Sub
 
-    Private Sub txtidproducto_Validating(sender As Object, e As CancelEventArgs) Handles txtidproducto.Validating
-        Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-                Me.ErrorValidacion.SetError(sender, "")
-            Else
-                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
     Private Sub txtnombre_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre.Validating
         Try
             If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
@@ -241,29 +231,6 @@ Public Class frmProductos
         End Try
     End Sub
 
-    Private Sub txtidcategoria_Validating(sender As Object, e As CancelEventArgs) Handles txtidcategoria.Validating
-        Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-                Me.ErrorValidacion.SetError(sender, "")
-            Else
-                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub txtnom_categoria_Validating(sender As Object, e As CancelEventArgs) Handles txtnom_categoria.Validating
-        Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
-                Me.ErrorValidacion.SetError(sender, "")
-            Else
-                Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
 
     Private Sub txtdescripcion_Validating(sender As Object, e As CancelEventArgs) Handles txtdescripcion.Validating
         Try
@@ -303,7 +270,7 @@ Public Class frmProductos
 
     Private Sub txtprecio_venta_Validating(sender As Object, e As CancelEventArgs) Handles txtprecio_venta.Validating
         Try
-            If DirectCast(sender, TextBox).Text.Length > 0 Then   'Si se deja vacio
+            If DirectCast(sender, TextBox).Text.Length > 0 Then
                 Me.ErrorValidacion.SetError(sender, "")
             Else
                 Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
@@ -311,6 +278,42 @@ Public Class frmProductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+
+
+    Private Sub txtstock_TextChanged(sender As Object, e As EventArgs) Handles txtstock.TextChanged
+
+    End Sub
+
+    Private Sub txtstock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtstock.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Private Sub txtprecio_compra_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprecio_compra.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Private Sub txtprecio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprecio_venta.KeyPress
+        If (Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57) Or Asc(e.KeyChar) = 8 Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub datalistado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
+
     End Sub
 
     Private Sub datalistado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellClick
@@ -331,8 +334,12 @@ Public Class frmProductos
         Dim ms As New IO.MemoryStream(b)
         imagen.Image = Image.FromStream(ms)
         imagen.SizeMode = PictureBoxSizeMode.StretchImage
-
+        eliminarImg.Visible = False
         btnguardar.Visible = False
         btneditar.Visible = True
+    End Sub
+
+    Private Sub txtidproducto_TextChanged(sender As Object, e As EventArgs) Handles txtidproducto.TextChanged
+
     End Sub
 End Class

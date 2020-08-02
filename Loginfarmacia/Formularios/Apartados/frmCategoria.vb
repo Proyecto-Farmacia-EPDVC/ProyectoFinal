@@ -40,19 +40,10 @@ Public Class frmCategoria
     End Sub
     Private Sub buscar()
         Try
-            dt = conexion.busqueda(" categoria ", " nombre_categoria like '%" + txtbuscar.Text + "%'")
-
-            If dt.Rows.Count <> 0 Then
-
-                datalistado.DataSource = dt
-                conexion.conexion.Close()
-                ocultar_columnas()
-            Else
-                datalistado.DataSource = Nothing
-                conexion.conexion.Close()
-            End If
-
-
+            Dim nombre_categoria As String
+            nombre_categoria = txtbuscar.Text
+            dt = conexion.buscarCategoria(nombre_categoria)
+            datalistado.DataSource = If(dt.Rows.Count <> 0, dt, Nothing)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -150,7 +141,7 @@ Public Class frmCategoria
 
         If result = DialogResult.OK Then
 
-            If Me.ValidateChildren = True And txtnombre.Text <> "" And txtidcategoria.Text <> "" Then
+            If Me.ValidateChildren = True And txtnombre.Text <> "" Then
                 Try
                     editarCategoria()
                     mostrar_categoria()
@@ -174,5 +165,9 @@ Public Class frmCategoria
         txtnombre.Text = datalistado.Rows(FilaActual).Cells(2).Value
         btnguardar.Visible = False
         btneditar.Visible = True
+    End Sub
+
+    Private Sub txtnombre_TextChanged(sender As Object, e As EventArgs) Handles txtnombre.TextChanged
+
     End Sub
 End Class
