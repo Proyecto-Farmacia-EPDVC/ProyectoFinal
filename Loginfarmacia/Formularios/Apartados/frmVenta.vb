@@ -41,20 +41,15 @@ Public Class frmVenta
         txtidventa.Text = ""
         txtidempleado.Text = ""
         txtnomempleado.Text = ""
+        txtbuscar.Text = ""
     End Sub
 
     Private Sub buscar()
         Try
-            dt = conexion.busqueda(" ventas ", " idventa like '%" + txtbuscar.Text + "%'")
-
-            If dt.Rows.Count <> 0 Then
-
-                datalistado.DataSource = dt
-                conexion.conexion.Close()
-            Else
-                datalistado.DataSource = Nothing
-                conexion.conexion.Close()
-            End If
+            Dim num_documento As String
+            num_documento = txtbuscar.Text
+            dt = conexion.buscarVenta(num_documento)
+            datalistado.DataSource = If(dt.Rows.Count <> 0, dt, Nothing)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -246,4 +241,15 @@ Public Class frmVenta
         End Try
     End Sub
 
+    Private Sub btnBuscarCliente_MouseHover(sender As Object, e As EventArgs) Handles btnBuscarCliente.MouseHover
+        ToolTip.SetToolTip(btnBuscarCliente, "Buscar en tabla Cliente")
+        ToolTip.ToolTipTitle = "Buscar Cliente"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtbuscarempleado_MouseHover(sender As Object, e As EventArgs) Handles txtbuscarempleado.MouseHover
+        ToolTip.SetToolTip(txtbuscarempleado, "Buscar en tabla Empleado")
+        ToolTip.ToolTipTitle = "Buscar Empleado"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

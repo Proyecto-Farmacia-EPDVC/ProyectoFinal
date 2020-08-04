@@ -114,4 +114,16 @@ Public Class frmCompra
             e.Handled = True
         End If
     End Sub
+
+    Private Sub btnbuscarPro_MouseHover(sender As Object, e As EventArgs) Handles btnbuscarPro.MouseHover
+        ToolTip.SetToolTip(btnbuscarPro, "Buscar en tabla proveedor")
+        ToolTip.ToolTipTitle = "Buscar Proveedor"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnBuscarProducto_MouseHover(sender As Object, e As EventArgs) Handles btnBuscarProducto.MouseHover
+        ToolTip.SetToolTip(btnbuscarPro, "Buscar en tabla productos")
+        ToolTip.ToolTipTitle = "Buscar Productos"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

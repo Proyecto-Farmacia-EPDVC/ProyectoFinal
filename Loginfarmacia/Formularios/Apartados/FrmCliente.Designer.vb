@@ -198,7 +198,7 @@ Partial Class FrmCliente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(138, 44)
+        Me.Label7.Location = New System.Drawing.Point(121, 44)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(360, 29)
         Me.Label7.TabIndex = 18

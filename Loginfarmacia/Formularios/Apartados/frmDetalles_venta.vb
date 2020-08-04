@@ -168,4 +168,10 @@ Public Class frmDetalles_venta
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnBuscarProducto_MouseHover(sender As Object, e As EventArgs) Handles btnBuscarProducto.MouseHover
+        ToolTip.SetToolTip(btnBuscarProducto, "Buscar en tabla productos")
+        ToolTip.ToolTipTitle = "Buscar Productos"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

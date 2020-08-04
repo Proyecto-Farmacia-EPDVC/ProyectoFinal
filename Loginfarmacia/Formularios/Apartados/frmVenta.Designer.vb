@@ -54,6 +54,7 @@ Partial Class frmVenta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidventa = New System.Windows.Forms.TextBox()
         Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -450,4 +451,5 @@ Partial Class frmVenta
     Friend WithEvents Eliminar As DataGridViewCheckBoxColumn
     Friend WithEvents inexistente As LinkLabel
     Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents ToolTip As ToolTip
 End Class

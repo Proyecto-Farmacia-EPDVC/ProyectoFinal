@@ -1,4 +1,4 @@
-﻿-- Base de datos, proyecto farmacia EPDVC
+-- Base de datos, proyecto farmacia EPDVC
 
 create database BaseFarmacia;
 use BaseFarmacia;
@@ -512,3 +512,4 @@ from detalle_venta
 where idventa = @idventa
 Group by idventa;
 go
+

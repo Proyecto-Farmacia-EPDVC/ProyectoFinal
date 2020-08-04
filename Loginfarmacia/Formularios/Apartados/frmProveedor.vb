@@ -38,6 +38,7 @@ Public Class frmProveedor
         txtdescripProv.Text = ""
         txtciudad.Text = ""
         txttelefono.Text = ""
+        txtbuscar.Text = ""
         txtidproveedor.Text = ""
     End Sub
     Private Sub buscar()

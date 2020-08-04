@@ -22,6 +22,7 @@ Partial Class frmCompra
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCompra))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -48,6 +49,7 @@ Partial Class frmCompra
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
         Me.datalistado = New System.Windows.Forms.DataGridView()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -377,4 +379,5 @@ Partial Class frmCompra
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents datalistado As DataGridView
     Friend WithEvents inexistente As LinkLabel
+    Friend WithEvents ToolTip As ToolTip
 End Class

@@ -45,6 +45,7 @@ Public Class frmProductos
         txtidcategoria.Text = ""
         txtdescripcion.Text = ""
         txtnom_categoria.Text = ""
+        txtbuscar.Text = ""
         txtstock.Text = "0"
         txtprecio_compra.Text = "0"
         txtprecio_venta.Text = "0"
@@ -341,5 +342,21 @@ Public Class frmProductos
 
     Private Sub txtidproducto_TextChanged(sender As Object, e As EventArgs) Handles txtidproducto.TextChanged
 
+    End Sub
+
+    Private Sub imagen_Click(sender As Object, e As EventArgs) Handles imagen.Click
+
+    End Sub
+
+    Private Sub imagen_MouseHover(sender As Object, e As EventArgs) Handles imagen.MouseHover
+        ToolTip.SetToolTip(imagen, "Ingrese la imagen del Producto")
+        ToolTip.ToolTipTitle = "Cargar imagen"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnbuscarcategoria_MouseHover(sender As Object, e As EventArgs) Handles btnbuscarcategoria.MouseHover
+        ToolTip.SetToolTip(btnbuscarcategoria, "Buscar en tabla categorias")
+        ToolTip.ToolTipTitle = "Buscar Categorias"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
     End Sub
 End Class

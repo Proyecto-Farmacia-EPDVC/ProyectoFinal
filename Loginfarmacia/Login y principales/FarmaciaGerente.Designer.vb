@@ -106,10 +106,10 @@ Partial Class FarmaciaGerente
         'lempleado
         '
         Me.lempleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.lempleado.Location = New System.Drawing.Point(-2, 569)
+        Me.lempleado.Location = New System.Drawing.Point(-2, 646)
         Me.lempleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.lempleado.Name = "lempleado"
-        Me.lempleado.Size = New System.Drawing.Size(10, 76)
+        Me.lempleado.Size = New System.Drawing.Size(11, 85)
         Me.lempleado.TabIndex = 12
         '
         'lcompras
@@ -132,12 +132,12 @@ Partial Class FarmaciaGerente
         Me.btnReportes.ForeColor = System.Drawing.Color.White
         Me.btnReportes.Image = CType(resources.GetObject("btnReportes.Image"), System.Drawing.Image)
         Me.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReportes.Location = New System.Drawing.Point(9, 652)
+        Me.btnReportes.Location = New System.Drawing.Point(8, 568)
         Me.btnReportes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnReportes.Name = "btnReportes"
-        Me.btnReportes.Size = New System.Drawing.Size(320, 76)
+        Me.btnReportes.Size = New System.Drawing.Size(322, 76)
         Me.btnReportes.TabIndex = 13
-        Me.btnReportes.Text = "Reportes"
+        Me.btnReportes.Text = "Auto Servicio"
         Me.btnReportes.UseVisualStyleBackColor = False
         '
         'MenuVertical
@@ -145,14 +145,14 @@ Partial Class FarmaciaGerente
         Me.MenuVertical.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MenuVertical.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.MenuVertical.Controls.Add(Me.btnReportes)
+        Me.MenuVertical.Controls.Add(Me.lreporte)
         Me.MenuVertical.Controls.Add(Me.PictureBox1)
         Me.MenuVertical.Controls.Add(Me.Panel9)
         Me.MenuVertical.Controls.Add(Me.Button1)
         Me.MenuVertical.Controls.Add(Me.lproveedor)
         Me.MenuVertical.Controls.Add(Me.btnproveedor)
-        Me.MenuVertical.Controls.Add(Me.lreporte)
         Me.MenuVertical.Controls.Add(Me.btnproductos)
-        Me.MenuVertical.Controls.Add(Me.btnReportes)
         Me.MenuVertical.Controls.Add(Me.lempleado)
         Me.MenuVertical.Controls.Add(Me.btncategoria)
         Me.MenuVertical.Controls.Add(Me.lcompras)
@@ -240,7 +240,7 @@ Partial Class FarmaciaGerente
         'lreporte
         '
         Me.lreporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.lreporte.Location = New System.Drawing.Point(-2, 652)
+        Me.lreporte.Location = New System.Drawing.Point(-1, 568)
         Me.lreporte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.lreporte.Name = "lreporte"
         Me.lreporte.Size = New System.Drawing.Size(10, 77)
@@ -295,10 +295,10 @@ Partial Class FarmaciaGerente
         Me.btnempleados.ForeColor = System.Drawing.Color.White
         Me.btnempleados.Image = CType(resources.GetObject("btnempleados.Image"), System.Drawing.Image)
         Me.btnempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnempleados.Location = New System.Drawing.Point(9, 568)
+        Me.btnempleados.Location = New System.Drawing.Point(9, 648)
         Me.btnempleados.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnempleados.Name = "btnempleados"
-        Me.btnempleados.Size = New System.Drawing.Size(321, 77)
+        Me.btnempleados.Size = New System.Drawing.Size(321, 83)
         Me.btnempleados.TabIndex = 9
         Me.btnempleados.Text = "Empleados"
         Me.btnempleados.UseVisualStyleBackColor = False

@@ -44,6 +44,7 @@ Public Class frmEmpleado
         txttelefono.Text = ""
         txtcontra.Text = ""
         txtidempleado.Text = ""
+        txtbuscar.Text = ""
     End Sub
 
     Private Sub buscar()

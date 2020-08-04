@@ -42,6 +42,7 @@ Public Class FrmCliente
         txtdireccion.Text = ""
         txttelefono.Text = ""
         txtdni.Text = ""
+        txtbuscar.Text = ""
         txtidcliente.Text = ""
     End Sub
     Private Sub buscar()

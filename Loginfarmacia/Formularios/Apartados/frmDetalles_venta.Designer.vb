@@ -60,6 +60,7 @@ Partial Class frmDetalles_venta
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.txtstock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,7 +80,7 @@ Partial Class frmDetalles_venta
         Me.btnimprimir.Name = "btnimprimir"
         Me.btnimprimir.Size = New System.Drawing.Size(134, 97)
         Me.btnimprimir.TabIndex = 23
-        Me.btnimprimir.Text = "Imprimir"
+        Me.btnimprimir.Text = "Venta"
         Me.btnimprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnimprimir.UseVisualStyleBackColor = False
         '
@@ -311,7 +312,7 @@ Partial Class frmDetalles_venta
         Me.GroupBox2.Size = New System.Drawing.Size(643, 383)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "lista articulos"
+        Me.GroupBox2.Text = "Historial de ventas"
         '
         'inexistente
         '
@@ -509,4 +510,5 @@ Partial Class frmDetalles_venta
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents ToolTip As ToolTip
 End Class

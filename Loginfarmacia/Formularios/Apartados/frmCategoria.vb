@@ -37,6 +37,7 @@ Public Class frmCategoria
         btneditar.Visible = False
         txtnombre.Text = ""
         txtidcategoria.Text = ""
+        txtbuscar.Text = ""
     End Sub
     Private Sub buscar()
         Try

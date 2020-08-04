@@ -162,12 +162,6 @@
     <Compile Include="Formularios\Apartados\frmProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login y principales\FarmaciaEmpleados.Designer.vb">
-      <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login y principales\FarmaciaEmpleados.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login y principales\FarmaciaGerente.Designer.vb">
       <DependentUpon>FarmaciaGerente.vb</DependentUpon>
     </Compile>
@@ -246,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Apartados\frmVenta.resx">
       <DependentUpon>frmVenta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login y principales\FarmaciaEmpleados.resx">
-      <DependentUpon>FarmaciaEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login y principales\FarmaciaGerente.resx">
       <DependentUpon>FarmaciaGerente.vb</DependentUpon>

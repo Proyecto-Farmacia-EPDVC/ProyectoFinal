@@ -15,8 +15,6 @@ Public Class FarmaciaGerente
         If txtflag.Text = "2" Then
             btnempleados.Visible = False
             lempleado.Visible = False
-            btnReportes.Visible = False
-            lreporte.Visible = False
             btnproveedor.Visible = False
             lproveedor.Visible = False
             btncompras.Visible = False
@@ -106,7 +104,7 @@ Public Class FarmaciaGerente
     End Sub
 
     Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
-
+        abrirFormulario(frmVenta)
     End Sub
 
     Private Sub btnproveedor_Click(sender As Object, e As EventArgs) Handles btnproveedor.Click
