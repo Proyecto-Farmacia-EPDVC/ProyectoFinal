@@ -69,11 +69,11 @@ Partial Class frmVenta
         Me.GroupBox2.Controls.Add(Me.txtbuscar)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Window
-        Me.GroupBox2.Location = New System.Drawing.Point(404, 519)
+        Me.GroupBox2.Location = New System.Drawing.Point(359, 415)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(1438, 392)
+        Me.GroupBox2.Size = New System.Drawing.Size(1278, 314)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "LISTA DE VENTAS"
@@ -81,9 +81,9 @@ Partial Class frmVenta
         'inexistente
         '
         Me.inexistente.AutoSize = True
-        Me.inexistente.Location = New System.Drawing.Point(734, 222)
+        Me.inexistente.Location = New System.Drawing.Point(652, 178)
         Me.inexistente.Name = "inexistente"
-        Me.inexistente.Size = New System.Drawing.Size(226, 29)
+        Me.inexistente.Size = New System.Drawing.Size(190, 25)
         Me.inexistente.TabIndex = 21
         Me.inexistente.TabStop = True
         Me.inexistente.Text = "Datos Inexistentes"
@@ -118,7 +118,7 @@ Partial Class frmVenta
         Me.datalistado.DefaultCellStyle = DataGridViewCellStyle2
         Me.datalistado.EnableHeadersVisualStyles = False
         Me.datalistado.GridColor = System.Drawing.SystemColors.Highlight
-        Me.datalistado.Location = New System.Drawing.Point(110, 92)
+        Me.datalistado.Location = New System.Drawing.Point(98, 74)
         Me.datalistado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.datalistado.Name = "datalistado"
         Me.datalistado.ReadOnly = True
@@ -126,7 +126,7 @@ Partial Class frmVenta
         Me.datalistado.RowHeadersWidth = 51
         Me.datalistado.RowTemplate.Height = 28
         Me.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datalistado.Size = New System.Drawing.Size(1251, 281)
+        Me.datalistado.Size = New System.Drawing.Size(1112, 225)
         Me.datalistado.TabIndex = 19
         '
         'Eliminar
@@ -135,23 +135,23 @@ Partial Class frmVenta
         Me.Eliminar.MinimumWidth = 6
         Me.Eliminar.Name = "Eliminar"
         Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Width = 113
+        Me.Eliminar.Width = 93
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(105, 44)
+        Me.Label7.Location = New System.Drawing.Point(93, 35)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(250, 29)
+        Me.Label7.Size = New System.Drawing.Size(208, 25)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Busqueda por # Doc"
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(361, 40)
+        Me.txtbuscar.Location = New System.Drawing.Point(321, 32)
         Me.txtbuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtbuscar.Name = "txtbuscar"
-        Me.txtbuscar.Size = New System.Drawing.Size(264, 35)
+        Me.txtbuscar.Size = New System.Drawing.Size(235, 30)
         Me.txtbuscar.TabIndex = 16
         '
         'GroupBox1
@@ -178,11 +178,11 @@ Partial Class frmVenta
         Me.GroupBox1.Controls.Add(Me.txtidventa)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.GroupBox1.Location = New System.Drawing.Point(404, 81)
+        Me.GroupBox1.Location = New System.Drawing.Point(359, 65)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(1438, 402)
+        Me.GroupBox1.Size = New System.Drawing.Size(1278, 322)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DATOS DE VENTA"
@@ -190,9 +190,9 @@ Partial Class frmVenta
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(122, 241)
+        Me.Label8.Location = New System.Drawing.Point(108, 193)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(185, 29)
+        Me.Label8.Size = New System.Drawing.Size(158, 25)
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "ID EMPLEADO"
         '
@@ -200,20 +200,20 @@ Partial Class frmVenta
         '
         Me.txtbuscarempleado.Cursor = System.Windows.Forms.Cursors.Hand
         Me.txtbuscarempleado.Image = CType(resources.GetObject("txtbuscarempleado.Image"), System.Drawing.Image)
-        Me.txtbuscarempleado.Location = New System.Drawing.Point(634, 291)
+        Me.txtbuscarempleado.Location = New System.Drawing.Point(564, 233)
         Me.txtbuscarempleado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtbuscarempleado.Name = "txtbuscarempleado"
-        Me.txtbuscarempleado.Size = New System.Drawing.Size(68, 48)
+        Me.txtbuscarempleado.Size = New System.Drawing.Size(60, 38)
         Me.txtbuscarempleado.TabIndex = 24
         Me.txtbuscarempleado.UseVisualStyleBackColor = True
         '
         'txtnomempleado
         '
-        Me.txtnomempleado.Location = New System.Drawing.Point(315, 304)
+        Me.txtnomempleado.Location = New System.Drawing.Point(280, 243)
         Me.txtnomempleado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtnomempleado.Name = "txtnomempleado"
         Me.txtnomempleado.ReadOnly = True
-        Me.txtnomempleado.Size = New System.Drawing.Size(299, 35)
+        Me.txtnomempleado.Size = New System.Drawing.Size(266, 30)
         Me.txtnomempleado.TabIndex = 23
         '
         'btnnuevo
@@ -223,10 +223,10 @@ Partial Class frmVenta
         Me.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnnuevo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnnuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnnuevo.Location = New System.Drawing.Point(1279, 86)
+        Me.btnnuevo.Location = New System.Drawing.Point(1137, 69)
         Me.btnnuevo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnnuevo.Name = "btnnuevo"
-        Me.btnnuevo.Size = New System.Drawing.Size(136, 92)
+        Me.btnnuevo.Size = New System.Drawing.Size(121, 74)
         Me.btnnuevo.TabIndex = 12
         Me.btnnuevo.Text = "Nuevo"
         Me.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -235,9 +235,9 @@ Partial Class frmVenta
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(148, 309)
+        Me.Label6.Location = New System.Drawing.Point(132, 247)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 29)
+        Me.Label6.Size = New System.Drawing.Size(131, 25)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "EMPLEADO"
         '
@@ -248,10 +248,10 @@ Partial Class frmVenta
         Me.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnguardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnguardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnguardar.Location = New System.Drawing.Point(1279, 244)
+        Me.btnguardar.Location = New System.Drawing.Point(1137, 195)
         Me.btnguardar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(136, 95)
+        Me.btnguardar.Size = New System.Drawing.Size(121, 76)
         Me.btnguardar.TabIndex = 16
         Me.btnguardar.Text = "Guardar"
         Me.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -259,12 +259,12 @@ Partial Class frmVenta
         '
         'txtidempleado
         '
-        Me.txtidempleado.Location = New System.Drawing.Point(315, 238)
+        Me.txtidempleado.Location = New System.Drawing.Point(280, 190)
         Me.txtidempleado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtidempleado.MaxLength = 13
         Me.txtidempleado.Name = "txtidempleado"
         Me.txtidempleado.ReadOnly = True
-        Me.txtidempleado.Size = New System.Drawing.Size(299, 35)
+        Me.txtidempleado.Size = New System.Drawing.Size(266, 30)
         Me.txtidempleado.TabIndex = 21
         '
         'btneditar
@@ -274,10 +274,10 @@ Partial Class frmVenta
         Me.btneditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btneditar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btneditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btneditar.Location = New System.Drawing.Point(1279, 244)
+        Me.btneditar.Location = New System.Drawing.Point(1137, 195)
         Me.btneditar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btneditar.Name = "btneditar"
-        Me.btneditar.Size = New System.Drawing.Size(136, 95)
+        Me.btneditar.Size = New System.Drawing.Size(121, 76)
         Me.btneditar.TabIndex = 13
         Me.btneditar.Text = "Editar"
         Me.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -288,113 +288,114 @@ Partial Class frmVenta
         Me.CMBtipo_documento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBtipo_documento.FormattingEnabled = True
         Me.CMBtipo_documento.Items.AddRange(New Object() {"Boleta", "Factura"})
-        Me.CMBtipo_documento.Location = New System.Drawing.Point(980, 158)
+        Me.CMBtipo_documento.Location = New System.Drawing.Point(871, 126)
         Me.CMBtipo_documento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CMBtipo_documento.Name = "CMBtipo_documento"
-        Me.CMBtipo_documento.Size = New System.Drawing.Size(224, 37)
+        Me.CMBtipo_documento.Size = New System.Drawing.Size(200, 33)
         Me.CMBtipo_documento.TabIndex = 20
         '
         'txtfecha
         '
         Me.txtfecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtfecha.Location = New System.Drawing.Point(979, 86)
+        Me.txtfecha.Location = New System.Drawing.Point(870, 69)
         Me.txtfecha.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtfecha.MaxDate = New Date(2020, 8, 1, 0, 0, 0, 0)
+        Me.txtfecha.MaxDate = New Date(2020, 8, 4, 0, 0, 0, 0)
+        Me.txtfecha.MinDate = New Date(2020, 8, 4, 0, 0, 0, 0)
         Me.txtfecha.Name = "txtfecha"
-        Me.txtfecha.Size = New System.Drawing.Size(224, 35)
+        Me.txtfecha.Size = New System.Drawing.Size(200, 30)
         Me.txtfecha.TabIndex = 19
-        Me.txtfecha.Value = New Date(2020, 8, 1, 0, 0, 0, 0)
+        Me.txtfecha.Value = New Date(2020, 8, 4, 0, 0, 0, 0)
         '
         'btnBuscarCliente
         '
         Me.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBuscarCliente.Image = CType(resources.GetObject("btnBuscarCliente.Image"), System.Drawing.Image)
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(634, 149)
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(564, 119)
         Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(68, 50)
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(60, 40)
         Me.btnBuscarCliente.TabIndex = 18
         Me.btnBuscarCliente.UseVisualStyleBackColor = True
         '
         'txtnombre_cliente
         '
-        Me.txtnombre_cliente.Location = New System.Drawing.Point(361, 164)
+        Me.txtnombre_cliente.Location = New System.Drawing.Point(321, 131)
         Me.txtnombre_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtnombre_cliente.Name = "txtnombre_cliente"
         Me.txtnombre_cliente.ReadOnly = True
-        Me.txtnombre_cliente.Size = New System.Drawing.Size(253, 35)
+        Me.txtnombre_cliente.Size = New System.Drawing.Size(225, 30)
         Me.txtnombre_cliente.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(783, 238)
+        Me.Label5.Location = New System.Drawing.Point(696, 190)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(189, 29)
+        Me.Label5.Size = New System.Drawing.Size(159, 25)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "NUMERO DOC"
         '
         'txtnum_documento
         '
-        Me.txtnum_documento.Location = New System.Drawing.Point(980, 232)
+        Me.txtnum_documento.Location = New System.Drawing.Point(871, 186)
         Me.txtnum_documento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtnum_documento.MaxLength = 10
         Me.txtnum_documento.Name = "txtnum_documento"
-        Me.txtnum_documento.Size = New System.Drawing.Size(224, 35)
+        Me.txtnum_documento.Size = New System.Drawing.Size(200, 30)
         Me.txtnum_documento.TabIndex = 8
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(836, 168)
+        Me.Label4.Location = New System.Drawing.Point(743, 134)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(137, 29)
+        Me.Label4.Size = New System.Drawing.Size(117, 25)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "TIPO DOC"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(783, 91)
+        Me.Label3.Location = New System.Drawing.Point(696, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(190, 29)
+        Me.Label3.Size = New System.Drawing.Size(164, 25)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "FECHA VENTA"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(179, 168)
+        Me.Label2.Location = New System.Drawing.Point(159, 134)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 29)
+        Me.Label2.Size = New System.Drawing.Size(103, 25)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "CLIENTE"
         '
         'txtidcliente
         '
-        Me.txtidcliente.Location = New System.Drawing.Point(315, 164)
+        Me.txtidcliente.Location = New System.Drawing.Point(280, 131)
         Me.txtidcliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtidcliente.Name = "txtidcliente"
         Me.txtidcliente.ReadOnly = True
-        Me.txtidcliente.Size = New System.Drawing.Size(40, 35)
+        Me.txtidcliente.Size = New System.Drawing.Size(36, 30)
         Me.txtidcliente.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(178, 92)
+        Me.Label1.Location = New System.Drawing.Point(158, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 29)
+        Me.Label1.Size = New System.Drawing.Size(112, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID VENTA"
         '
         'txtidventa
         '
-        Me.txtidventa.Location = New System.Drawing.Point(315, 91)
+        Me.txtidventa.Location = New System.Drawing.Point(280, 73)
         Me.txtidventa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtidventa.Name = "txtidventa"
         Me.txtidventa.ReadOnly = True
-        Me.txtidventa.Size = New System.Drawing.Size(299, 35)
+        Me.txtidventa.Size = New System.Drawing.Size(266, 30)
         Me.txtidventa.TabIndex = 0
         '
         'ErrorValidacion
@@ -403,10 +404,10 @@ Partial Class frmVenta
         '
         'frmVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1942, 942)
+        Me.ClientSize = New System.Drawing.Size(1726, 754)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
